@@ -1,0 +1,768 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		532E467E9553890B7D97BD03 /* Pods_TravelAPIApp_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC56B5769FDF40931F64B46D /* Pods_TravelAPIApp_WatchKit_App.framework */; };
+		9C4665DAA35F468F7260C0CD /* Pods_TravelAPIApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF983B3759F235C19CA01BB8 /* Pods_TravelAPIApp.framework */; };
+		C1EE99FE223BF77500A9ED26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EE99FD223BF77500A9ED26 /* AppDelegate.swift */; };
+		C1EE9A00223BF77500A9ED26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EE99FF223BF77500A9ED26 /* ViewController.swift */; };
+		C1EE9A03223BF77500A9ED26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1EE9A01223BF77500A9ED26 /* Main.storyboard */; };
+		C1EE9A05223BF77600A9ED26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1EE9A04223BF77600A9ED26 /* Assets.xcassets */; };
+		C1EE9A08223BF77700A9ED26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1EE9A06223BF77700A9ED26 /* LaunchScreen.storyboard */; };
+		C1EE9A0D223BF77700A9ED26 /* TravelAPIApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C1EE9A0C223BF77700A9ED26 /* TravelAPIApp WatchKit App.app */; };
+		C1EE9A13223BF77700A9ED26 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1EE9A11223BF77700A9ED26 /* Interface.storyboard */; };
+		C1EE9A15223BF77700A9ED26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1EE9A14223BF77700A9ED26 /* Assets.xcassets */; };
+		C1EE9A1C223BF77800A9ED26 /* TravelAPIApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C1EE9A1B223BF77800A9ED26 /* TravelAPIApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C1EE9A21223BF77800A9ED26 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EE9A20223BF77800A9ED26 /* InterfaceController.swift */; };
+		C1EE9A23223BF77800A9ED26 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EE9A22223BF77800A9ED26 /* ExtensionDelegate.swift */; };
+		C1EE9A25223BF77800A9ED26 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EE9A24223BF77800A9ED26 /* NotificationController.swift */; };
+		C1EE9A27223BF77800A9ED26 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EE9A26223BF77800A9ED26 /* ComplicationController.swift */; };
+		C1EE9A29223BF77900A9ED26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1EE9A28223BF77900A9ED26 /* Assets.xcassets */; };
+		F38DC86273480C38DB0BFAD7 /* Pods_TravelAPIApp_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F91916A313C138ECD3B3634 /* Pods_TravelAPIApp_WatchKit_Extension.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C1EE9A0E223BF77700A9ED26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1EE99F2223BF77500A9ED26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1EE9A0B223BF77700A9ED26;
+			remoteInfo = "TravelAPIApp WatchKit App";
+		};
+		C1EE9A1D223BF77800A9ED26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1EE99F2223BF77500A9ED26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1EE9A1A223BF77800A9ED26;
+			remoteInfo = "TravelAPIApp WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C1EE9A31223BF77900A9ED26 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C1EE9A1C223BF77800A9ED26 /* TravelAPIApp WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1EE9A35223BF77900A9ED26 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				C1EE9A0D223BF77700A9ED26 /* TravelAPIApp WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2461DD5D7759DC73F3F5CA75 /* Pods-TravelAPIApp WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelAPIApp WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravelAPIApp WatchKit Extension/Pods-TravelAPIApp WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		3E6515DD6C2C2F60828AB76A /* Pods-TravelAPIApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelAPIApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravelAPIApp/Pods-TravelAPIApp.debug.xcconfig"; sourceTree = "<group>"; };
+		50CF6AB9169E95A5C307AF87 /* Pods-TravelAPIApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelAPIApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TravelAPIApp/Pods-TravelAPIApp.release.xcconfig"; sourceTree = "<group>"; };
+		6F91916A313C138ECD3B3634 /* Pods_TravelAPIApp_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelAPIApp_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC56B5769FDF40931F64B46D /* Pods_TravelAPIApp_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelAPIApp_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1EE99FA223BF77500A9ED26 /* TravelAPIApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelAPIApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1EE99FD223BF77500A9ED26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C1EE99FF223BF77500A9ED26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C1EE9A02223BF77500A9ED26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C1EE9A04223BF77600A9ED26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C1EE9A07223BF77700A9ED26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C1EE9A09223BF77700A9ED26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1EE9A0C223BF77700A9ED26 /* TravelAPIApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TravelAPIApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1EE9A12223BF77700A9ED26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		C1EE9A14223BF77700A9ED26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C1EE9A16223BF77700A9ED26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1EE9A1B223BF77800A9ED26 /* TravelAPIApp WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TravelAPIApp WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1EE9A20223BF77800A9ED26 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		C1EE9A22223BF77800A9ED26 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		C1EE9A24223BF77800A9ED26 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		C1EE9A26223BF77800A9ED26 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		C1EE9A28223BF77900A9ED26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C1EE9A2A223BF77900A9ED26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1EE9A2B223BF77900A9ED26 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		C25B3F0F840B47042C559349 /* Pods-TravelAPIApp WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelAPIApp WatchKit App.release.xcconfig"; path = "Pods/Target Support Files/Pods-TravelAPIApp WatchKit App/Pods-TravelAPIApp WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		CF983B3759F235C19CA01BB8 /* Pods_TravelAPIApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelAPIApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D827CD7DEA503867E87EFBDC /* Pods-TravelAPIApp WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelAPIApp WatchKit App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravelAPIApp WatchKit App/Pods-TravelAPIApp WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		E6CCF1F59ECF731C761E2B62 /* Pods-TravelAPIApp WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelAPIApp WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-TravelAPIApp WatchKit Extension/Pods-TravelAPIApp WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		94B8C568A097286613894314 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				532E467E9553890B7D97BD03 /* Pods_TravelAPIApp_WatchKit_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1EE99F7223BF77500A9ED26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C4665DAA35F468F7260C0CD /* Pods_TravelAPIApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1EE9A18223BF77800A9ED26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F38DC86273480C38DB0BFAD7 /* Pods_TravelAPIApp_WatchKit_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18E8FCD2D8F0F7D3863A7A9D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E6515DD6C2C2F60828AB76A /* Pods-TravelAPIApp.debug.xcconfig */,
+				50CF6AB9169E95A5C307AF87 /* Pods-TravelAPIApp.release.xcconfig */,
+				D827CD7DEA503867E87EFBDC /* Pods-TravelAPIApp WatchKit App.debug.xcconfig */,
+				C25B3F0F840B47042C559349 /* Pods-TravelAPIApp WatchKit App.release.xcconfig */,
+				2461DD5D7759DC73F3F5CA75 /* Pods-TravelAPIApp WatchKit Extension.debug.xcconfig */,
+				E6CCF1F59ECF731C761E2B62 /* Pods-TravelAPIApp WatchKit Extension.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		95178323520FA7C96EB29EA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF983B3759F235C19CA01BB8 /* Pods_TravelAPIApp.framework */,
+				BC56B5769FDF40931F64B46D /* Pods_TravelAPIApp_WatchKit_App.framework */,
+				6F91916A313C138ECD3B3634 /* Pods_TravelAPIApp_WatchKit_Extension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1EE99F1223BF77500A9ED26 = {
+			isa = PBXGroup;
+			children = (
+				C1EE99FC223BF77500A9ED26 /* TravelAPIApp */,
+				C1EE9A10223BF77700A9ED26 /* TravelAPIApp WatchKit App */,
+				C1EE9A1F223BF77800A9ED26 /* TravelAPIApp WatchKit Extension */,
+				C1EE99FB223BF77500A9ED26 /* Products */,
+				18E8FCD2D8F0F7D3863A7A9D /* Pods */,
+				95178323520FA7C96EB29EA1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C1EE99FB223BF77500A9ED26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1EE99FA223BF77500A9ED26 /* TravelAPIApp.app */,
+				C1EE9A0C223BF77700A9ED26 /* TravelAPIApp WatchKit App.app */,
+				C1EE9A1B223BF77800A9ED26 /* TravelAPIApp WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C1EE99FC223BF77500A9ED26 /* TravelAPIApp */ = {
+			isa = PBXGroup;
+			children = (
+				C1EE99FD223BF77500A9ED26 /* AppDelegate.swift */,
+				C1EE99FF223BF77500A9ED26 /* ViewController.swift */,
+				C1EE9A01223BF77500A9ED26 /* Main.storyboard */,
+				C1EE9A04223BF77600A9ED26 /* Assets.xcassets */,
+				C1EE9A06223BF77700A9ED26 /* LaunchScreen.storyboard */,
+				C1EE9A09223BF77700A9ED26 /* Info.plist */,
+			);
+			path = TravelAPIApp;
+			sourceTree = "<group>";
+		};
+		C1EE9A10223BF77700A9ED26 /* TravelAPIApp WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				C1EE9A11223BF77700A9ED26 /* Interface.storyboard */,
+				C1EE9A14223BF77700A9ED26 /* Assets.xcassets */,
+				C1EE9A16223BF77700A9ED26 /* Info.plist */,
+			);
+			path = "TravelAPIApp WatchKit App";
+			sourceTree = "<group>";
+		};
+		C1EE9A1F223BF77800A9ED26 /* TravelAPIApp WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C1EE9A20223BF77800A9ED26 /* InterfaceController.swift */,
+				C1EE9A22223BF77800A9ED26 /* ExtensionDelegate.swift */,
+				C1EE9A24223BF77800A9ED26 /* NotificationController.swift */,
+				C1EE9A26223BF77800A9ED26 /* ComplicationController.swift */,
+				C1EE9A28223BF77900A9ED26 /* Assets.xcassets */,
+				C1EE9A2A223BF77900A9ED26 /* Info.plist */,
+				C1EE9A2B223BF77900A9ED26 /* PushNotificationPayload.apns */,
+			);
+			path = "TravelAPIApp WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C1EE99F9223BF77500A9ED26 /* TravelAPIApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1EE9A36223BF77900A9ED26 /* Build configuration list for PBXNativeTarget "TravelAPIApp" */;
+			buildPhases = (
+				CC92D652DA7C25CA6108AC90 /* [CP] Check Pods Manifest.lock */,
+				C1EE99F6223BF77500A9ED26 /* Sources */,
+				C1EE99F7223BF77500A9ED26 /* Frameworks */,
+				C1EE99F8223BF77500A9ED26 /* Resources */,
+				C1EE9A35223BF77900A9ED26 /* Embed Watch Content */,
+				7B0A033FF0065A332763EBED /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1EE9A0F223BF77700A9ED26 /* PBXTargetDependency */,
+			);
+			name = TravelAPIApp;
+			productName = TravelAPIApp;
+			productReference = C1EE99FA223BF77500A9ED26 /* TravelAPIApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C1EE9A0B223BF77700A9ED26 /* TravelAPIApp WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1EE9A32223BF77900A9ED26 /* Build configuration list for PBXNativeTarget "TravelAPIApp WatchKit App" */;
+			buildPhases = (
+				D3DB245D8A36897DF8F27F00 /* [CP] Check Pods Manifest.lock */,
+				C1EE9A0A223BF77700A9ED26 /* Resources */,
+				C1EE9A31223BF77900A9ED26 /* Embed App Extensions */,
+				94B8C568A097286613894314 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1EE9A1E223BF77800A9ED26 /* PBXTargetDependency */,
+			);
+			name = "TravelAPIApp WatchKit App";
+			productName = "TravelAPIApp WatchKit App";
+			productReference = C1EE9A0C223BF77700A9ED26 /* TravelAPIApp WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		C1EE9A1A223BF77800A9ED26 /* TravelAPIApp WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1EE9A2E223BF77900A9ED26 /* Build configuration list for PBXNativeTarget "TravelAPIApp WatchKit Extension" */;
+			buildPhases = (
+				9E8940472429CA8A15B7A4D8 /* [CP] Check Pods Manifest.lock */,
+				C1EE9A17223BF77800A9ED26 /* Sources */,
+				C1EE9A18223BF77800A9ED26 /* Frameworks */,
+				C1EE9A19223BF77800A9ED26 /* Resources */,
+				FE8A05A5E9A7700826F9A505 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TravelAPIApp WatchKit Extension";
+			productName = "TravelAPIApp WatchKit Extension";
+			productReference = C1EE9A1B223BF77800A9ED26 /* TravelAPIApp WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C1EE99F2223BF77500A9ED26 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Abita Shiney";
+				TargetAttributes = {
+					C1EE99F9223BF77500A9ED26 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					C1EE9A0B223BF77700A9ED26 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					C1EE9A1A223BF77800A9ED26 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = C1EE99F5223BF77500A9ED26 /* Build configuration list for PBXProject "TravelAPIApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C1EE99F1223BF77500A9ED26;
+			productRefGroup = C1EE99FB223BF77500A9ED26 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C1EE99F9223BF77500A9ED26 /* TravelAPIApp */,
+				C1EE9A0B223BF77700A9ED26 /* TravelAPIApp WatchKit App */,
+				C1EE9A1A223BF77800A9ED26 /* TravelAPIApp WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C1EE99F8223BF77500A9ED26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1EE9A08223BF77700A9ED26 /* LaunchScreen.storyboard in Resources */,
+				C1EE9A05223BF77600A9ED26 /* Assets.xcassets in Resources */,
+				C1EE9A03223BF77500A9ED26 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1EE9A0A223BF77700A9ED26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1EE9A15223BF77700A9ED26 /* Assets.xcassets in Resources */,
+				C1EE9A13223BF77700A9ED26 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1EE9A19223BF77800A9ED26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1EE9A29223BF77900A9ED26 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B0A033FF0065A332763EBED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TravelAPIApp/Pods-TravelAPIApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-iOS/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON-iOS/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TravelAPIApp/Pods-TravelAPIApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E8940472429CA8A15B7A4D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TravelAPIApp WatchKit Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC92D652DA7C25CA6108AC90 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TravelAPIApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3DB245D8A36897DF8F27F00 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TravelAPIApp WatchKit App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE8A05A5E9A7700826F9A505 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TravelAPIApp WatchKit Extension/Pods-TravelAPIApp WatchKit Extension-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-watchOS/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON-watchOS/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TravelAPIApp WatchKit Extension/Pods-TravelAPIApp WatchKit Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C1EE99F6223BF77500A9ED26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1EE9A00223BF77500A9ED26 /* ViewController.swift in Sources */,
+				C1EE99FE223BF77500A9ED26 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1EE9A17223BF77800A9ED26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1EE9A25223BF77800A9ED26 /* NotificationController.swift in Sources */,
+				C1EE9A27223BF77800A9ED26 /* ComplicationController.swift in Sources */,
+				C1EE9A23223BF77800A9ED26 /* ExtensionDelegate.swift in Sources */,
+				C1EE9A21223BF77800A9ED26 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C1EE9A0F223BF77700A9ED26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1EE9A0B223BF77700A9ED26 /* TravelAPIApp WatchKit App */;
+			targetProxy = C1EE9A0E223BF77700A9ED26 /* PBXContainerItemProxy */;
+		};
+		C1EE9A1E223BF77800A9ED26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1EE9A1A223BF77800A9ED26 /* TravelAPIApp WatchKit Extension */;
+			targetProxy = C1EE9A1D223BF77800A9ED26 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C1EE9A01223BF77500A9ED26 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1EE9A02223BF77500A9ED26 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C1EE9A06223BF77700A9ED26 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1EE9A07223BF77700A9ED26 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C1EE9A11223BF77700A9ED26 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1EE9A12223BF77700A9ED26 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C1EE9A2C223BF77900A9ED26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C1EE9A2D223BF77900A9ED26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C1EE9A2F223BF77900A9ED26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2461DD5D7759DC73F3F5CA75 /* Pods-TravelAPIApp WatchKit Extension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "TravelAPIApp WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.codewithShiney.TravelAPIApp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		C1EE9A30223BF77900A9ED26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6CCF1F59ECF731C761E2B62 /* Pods-TravelAPIApp WatchKit Extension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "TravelAPIApp WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.codewithShiney.TravelAPIApp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
+		C1EE9A33223BF77900A9ED26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D827CD7DEA503867E87EFBDC /* Pods-TravelAPIApp WatchKit App.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = TravelAPIApp_WatchKit_Extension;
+				INFOPLIST_FILE = "TravelAPIApp WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.codewithShiney.TravelAPIApp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		C1EE9A34223BF77900A9ED26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C25B3F0F840B47042C559349 /* Pods-TravelAPIApp WatchKit App.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = TravelAPIApp_WatchKit_Extension;
+				INFOPLIST_FILE = "TravelAPIApp WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.codewithShiney.TravelAPIApp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
+		C1EE9A37223BF77900A9ED26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E6515DD6C2C2F60828AB76A /* Pods-TravelAPIApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TravelAPIApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.codewithShiney.TravelAPIApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C1EE9A38223BF77900A9ED26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50CF6AB9169E95A5C307AF87 /* Pods-TravelAPIApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TravelAPIApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.codewithShiney.TravelAPIApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C1EE99F5223BF77500A9ED26 /* Build configuration list for PBXProject "TravelAPIApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1EE9A2C223BF77900A9ED26 /* Debug */,
+				C1EE9A2D223BF77900A9ED26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1EE9A2E223BF77900A9ED26 /* Build configuration list for PBXNativeTarget "TravelAPIApp WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1EE9A2F223BF77900A9ED26 /* Debug */,
+				C1EE9A30223BF77900A9ED26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1EE9A32223BF77900A9ED26 /* Build configuration list for PBXNativeTarget "TravelAPIApp WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1EE9A33223BF77900A9ED26 /* Debug */,
+				C1EE9A34223BF77900A9ED26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1EE9A36223BF77900A9ED26 /* Build configuration list for PBXNativeTarget "TravelAPIApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1EE9A37223BF77900A9ED26 /* Debug */,
+				C1EE9A38223BF77900A9ED26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C1EE99F2223BF77500A9ED26 /* Project object */;
+}
