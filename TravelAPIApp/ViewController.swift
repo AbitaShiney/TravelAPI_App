@@ -150,17 +150,19 @@ class ViewController: UIViewController, UIPickerViewDelegate , UIPickerViewDataS
         
         for (key, value1) in self.cityList{
             
-            var dataSend : [String : String] = [:]
+            var dataSend : [[String : String]] = []
+            var tempArray : [String : String] = [:]
             
             if(value1["depatureCity"].string == toCity && value1["arrivalCity"].string == arrivalCity){
                 
                 for (key2, value2) in value1{
                  
-                    dataSend[key2] = value2.string!
+                    tempArray[key2] = value2.string!
                     
                 }
+                dataSend.append(tempArray)
                 
-                wcSession.sendMessage(dataSend, replyHandler: nil) { (err) in
+                wcSession.sendMessage(["data": dataSend], replyHandler: nil) { (err) in
                             print(err.localizedDescription)
                         }
             }

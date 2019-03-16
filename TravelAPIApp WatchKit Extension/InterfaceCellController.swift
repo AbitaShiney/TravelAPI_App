@@ -12,5 +12,12 @@ class InterfaceCellController: NSObject {
 
     @IBOutlet weak var airlineName: WKInterfaceLabel!
     
+    @IBOutlet weak var departCity: WKInterfaceLabel!
+    
+    @IBOutlet weak var arrivalCity: WKInterfaceLabel!
+    
+    @IBOutlet weak var price: WKInterfaceLabel!
+    
+    @IBOutlet weak var btnBook: WKInterfaceButton!
     
 }

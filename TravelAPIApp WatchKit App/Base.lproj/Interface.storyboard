@@ -29,11 +29,7 @@
                                                     <group width="1" alignment="left" id="1s8-qv-yj8">
                                                         <items>
                                                             <label alignment="left" verticalAlignment="center" text="Price" id="Yqv-a0-rt2"/>
-                                                            <button alignment="right" title="Book " id="3Cy-Nn-yfd">
-                                                                <connections>
-                                                                    <action selector="BookFlightButton" destination="AgC-eL-Hgc" id="8Rn-4e-Z36"/>
-                                                                </connections>
-                                                            </button>
+                                                            <button alignment="right" title="Book " id="3Cy-Nn-yfd"/>
                                                         </items>
                                                     </group>
                                                 </items>
@@ -41,18 +37,18 @@
                                         </items>
                                     </group>
                                     <connections>
-                                        <outlet property="ArrivalCityLabel" destination="Rp1-WR-ILW" id="0Fv-Ly-H5r"/>
-                                        <outlet property="BookFlight" destination="3Cy-Nn-yfd" id="pF3-SR-xfg"/>
-                                        <outlet property="DepartureCityLabel" destination="ao3-gB-Kwb" id="JMH-Aq-cow"/>
-                                        <outlet property="PriceLabel" destination="Yqv-a0-rt2" id="k4D-7h-nj4"/>
                                         <outlet property="airlineName" destination="fyI-G8-fM3" id="4TP-b6-2KR"/>
+                                        <outlet property="arrivalCity" destination="Rp1-WR-ILW" id="PdT-7u-p1E"/>
+                                        <outlet property="btnBook" destination="3Cy-Nn-yfd" id="jLJ-05-f2U"/>
+                                        <outlet property="departCity" destination="ao3-gB-Kwb" id="80z-77-alz"/>
+                                        <outlet property="price" destination="Yqv-a0-rt2" id="Bww-xN-n4M"/>
                                     </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
                     <connections>
-                        <outlet property="FlightTable" destination="QX8-Sp-1bP" id="E23-ix-ooH"/>
+                        <outlet property="FlightTable" destination="QX8-Sp-1bP" id="mxS-QB-esu"/>
                     </connections>
                 </controller>
             </objects>
