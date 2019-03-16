@@ -18,7 +18,7 @@ class ViewController: UIViewController, UIPickerViewDelegate , UIPickerViewDataS
     
     @IBOutlet weak var arrivalTextField: UITextField!
     
-    var data = ["q" ,"d" ,"f"]
+    var data:[String] = []
     var pickerView = UIPickerView()
     var currentTextField = UITextField()
     
@@ -40,7 +40,25 @@ class ViewController: UIViewController, UIPickerViewDelegate , UIPickerViewDataS
             
             // OUTPUT the json response to the terminal
             print("=================")
-            print(apiData)
+           // print(apiData)
+            // GET something out of the JSON response
+            let jsonResponse = JSON(apiData)
+            
+            
+            
+                        let sunriseTime = jsonResponse["items"]
+            
+
+            
+            for (key, value1) in sunriseTime{
+
+
+                print(value1["depatureCity"])
+                self.data.append(value1["depatureCity"].string!)
+                
+            
+            }
+            
         }
             
         // Do any additional setup after loading the view, typically from a nib.
