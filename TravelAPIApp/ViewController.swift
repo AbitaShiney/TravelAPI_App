@@ -9,8 +9,11 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import WatchConnectivity
 
-class ViewController: UIViewController, UIPickerViewDelegate , UIPickerViewDataSource, UITextFieldDelegate{
+class ViewController: UIViewController, UIPickerViewDelegate , UIPickerViewDataSource, UITextFieldDelegate, WCSessionDelegate{
+   
+    
   
     
 
@@ -18,12 +21,22 @@ class ViewController: UIViewController, UIPickerViewDelegate , UIPickerViewDataS
     
     @IBOutlet weak var arrivalTextField: UITextField!
     
-    var data:[String] = []
+    var toData:[String] = []
+     var arrivalData:[String] = []
     var pickerView = UIPickerView()
     var currentTextField = UITextField()
+    var jsonResponse = JSON()
+    var cityList = JSON()
+    //var resultData = JSON()
+     var wcSession : WCSession!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        wcSession = WCSession.default
+        wcSession.delegate = self
+        wcSession.activate()
+        
         let URL = "https://5c8d0bf335643b001493895a.mockapi.io/api/v1/Flight/"
         
         Alamofire.request(URL).responseJSON {
@@ -42,32 +55,27 @@ class ViewController: UIViewController, UIPickerViewDelegate , UIPickerViewDataS
             print("=================")
            // print(apiData)
             // GET something out of the JSON response
-            let jsonResponse = JSON(apiData)
+             self.jsonResponse = JSON(apiData)
             
             
             
-                        let sunriseTime = jsonResponse["items"]
+             self.cityList = self.jsonResponse["items"]
             
 
             
-            for (key, value1) in sunriseTime{
+            for (key, value1) in self.cityList{
 
 
-                print(value1["depatureCity"])
-                self.data.append(value1["depatureCity"].string!)
+               // print(value1["depatureCity"])
+                self.toData.append(value1["depatureCity"].string!)
+                 self.arrivalData.append(value1["arrivalCity"].string!)
                 
             
             }
             
         }
             
-        // Do any additional setup after loading the view, typically from a nib.
-       
-//        toTextField.delegate = self
-//        arrivalTextField.delegate = self
-//        toTextField.inputView = pickerView
-//        arrivalTextField.inputView = pickerView
-       // toolbar()
+
         
     }
 
@@ -82,10 +90,10 @@ class ViewController: UIViewController, UIPickerViewDelegate , UIPickerViewDataS
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if currentTextField == toTextField{
-            return data.count
+            return toData.count
         }
         else if currentTextField == arrivalTextField{
-            return data.count
+            return arrivalData.count
         }
         else{
         return 0
@@ -95,11 +103,11 @@ class ViewController: UIViewController, UIPickerViewDelegate , UIPickerViewDataS
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         //return toTextField.text = data[row]
         if currentTextField == toTextField{
-           toTextField.text = data[row]
+           toTextField.text = toData[row]
             self.view.endEditing(true)
         }
         else if currentTextField == arrivalTextField{
-            arrivalTextField.text = data[row]
+            arrivalTextField.text = arrivalData[row]
             self.view.endEditing(true)
         }
         
@@ -109,10 +117,10 @@ class ViewController: UIViewController, UIPickerViewDelegate , UIPickerViewDataS
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if currentTextField == toTextField{
-            return data[row]
+            return toData[row]
         }
         else if currentTextField == arrivalTextField{
-            return data[row]
+            return arrivalData[row]
         }
         else{
             return ""
@@ -130,17 +138,53 @@ class ViewController: UIViewController, UIPickerViewDelegate , UIPickerViewDataS
         }
     }
 
-    func toolbar(){
-        let toolBar = UIToolbar()
-        toolBar.sizeToFit()
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(ViewController.dismissKeyBoard))
-        toolBar.setItems([doneButton], animated: false)
-        toolBar.isUserInteractionEnabled = true
-        toTextField.inputAccessoryView = toolBar
-    }
-    @objc func dismissKeyBoard(){
-        view.endEditing(true)
+    
+    
+    //MARK: WCsession or watch connectivity stubs
+    
+    @IBAction func serachBtn(_ sender: Any) {
+        print("button clicked")
         
+        var toCity = toTextField.text
+        var arrivalCity = arrivalTextField.text
+        
+        for (key, value1) in self.cityList{
+            
+            var dataSend : [String : String] = [:]
+            
+            if(value1["depatureCity"].string == toCity && value1["arrivalCity"].string == arrivalCity){
+                
+                for (key2, value2) in value1{
+                 
+                    dataSend[key2] = value2.string!
+                    
+                }
+                
+                wcSession.sendMessage(dataSend, replyHandler: nil) { (err) in
+                            print(err.localizedDescription)
+                        }
+            }
+            
+            
+        }
+        
+        
+        
+//        wcSession.sendMessage(resultData, replyHandler: nil) { (err) in
+//            print(err.localizedDescription)
+//        }
+//
+    }
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+            
     }
 }
 

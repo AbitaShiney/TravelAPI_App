@@ -17,7 +17,7 @@
                         <label height="20" alignment="center" text="Book Flight" id="vNh-Bp-9oK"/>
                         <table alignment="left" id="QX8-Sp-1bP">
                             <items>
-                                <tableRow identifier="flight_cell" id="wRa-Wl-MaV" customClass="FlightTableViewController" customModule="TravelAPIApp_WatchKit_Extension">
+                                <tableRow identifier="flight_cell" id="wRa-Wl-MaV" customClass="InterfaceCellController" customModule="TravelAPIApp_WatchKit_Extension">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" id="XWc-Ci-OCT">
                                         <items>
                                             <group width="1" alignment="left" layout="vertical" id="nL3-Xr-uLu">
@@ -41,11 +41,11 @@
                                         </items>
                                     </group>
                                     <connections>
-                                        <outlet property="AirlinesLabel" destination="fyI-G8-fM3" id="ESY-4h-Htn"/>
                                         <outlet property="ArrivalCityLabel" destination="Rp1-WR-ILW" id="0Fv-Ly-H5r"/>
                                         <outlet property="BookFlight" destination="3Cy-Nn-yfd" id="pF3-SR-xfg"/>
                                         <outlet property="DepartureCityLabel" destination="ao3-gB-Kwb" id="JMH-Aq-cow"/>
                                         <outlet property="PriceLabel" destination="Yqv-a0-rt2" id="k4D-7h-nj4"/>
+                                        <outlet property="airlineName" destination="fyI-G8-fM3" id="4TP-b6-2KR"/>
                                     </connections>
                                 </tableRow>
                             </items>

@@ -45,6 +45,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXy-FD-iMp">
                                 <rect key="frame" x="127" y="267" width="122" height="30"/>
                                 <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="serachBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QzY-rF-oFS"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Depature City:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6IQ-5v-aA8">
                                 <rect key="frame" x="132" y="53" width="110" height="21"/>
