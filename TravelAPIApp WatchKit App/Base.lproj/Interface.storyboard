@@ -1,47 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14256" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14243"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14219"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
-            </objects>
-            <point key="canvasLocation" x="220" y="345"/>
-        </scene>
-        <!--Static Notification Interface Controller-->
-        <scene sceneID="AEw-b0-oYE">
-            <objects>
-                <notificationController id="YCC-NB-fut">
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="TravelAPIApp_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                        <label height="20" alignment="center" text="Book Flight" id="vNh-Bp-9oK"/>
+                        <table alignment="left" id="QX8-Sp-1bP">
+                            <items>
+                                <tableRow identifier="flight_cell" id="wRa-Wl-MaV" customClass="FlightTableViewController" customModule="TravelAPIApp_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="XWc-Ci-OCT">
+                                        <items>
+                                            <group width="1" alignment="left" layout="vertical" id="nL3-Xr-uLu">
+                                                <items>
+                                                    <label alignment="center" text="Airlines" id="fyI-G8-fM3"/>
+                                                    <label alignment="center" text="DepartureCity" id="ao3-gB-Kwb"/>
+                                                    <label alignment="center" text="To" id="3dF-94-FRc"/>
+                                                    <label alignment="center" text="ArrivalCity" id="Rp1-WR-ILW"/>
+                                                    <group width="1" alignment="left" id="1s8-qv-yj8">
+                                                        <items>
+                                                            <label alignment="left" verticalAlignment="center" text="Price" id="Yqv-a0-rt2"/>
+                                                            <button alignment="right" title="Book " id="3Cy-Nn-yfd">
+                                                                <connections>
+                                                                    <action selector="BookFlightButton" destination="AgC-eL-Hgc" id="8Rn-4e-Z36"/>
+                                                                </connections>
+                                                            </button>
+                                                        </items>
+                                                    </group>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="AirlinesLabel" destination="fyI-G8-fM3" id="ESY-4h-Htn"/>
+                                        <outlet property="ArrivalCityLabel" destination="Rp1-WR-ILW" id="0Fv-Ly-H5r"/>
+                                        <outlet property="BookFlight" destination="3Cy-Nn-yfd" id="pF3-SR-xfg"/>
+                                        <outlet property="DepartureCityLabel" destination="ao3-gB-Kwb" id="JMH-Aq-cow"/>
+                                        <outlet property="PriceLabel" destination="Yqv-a0-rt2" id="k4D-7h-nj4"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
                     </items>
-                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
                     <connections>
-                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
-                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
-                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
+                        <outlet property="FlightTable" destination="QX8-Sp-1bP" id="E23-ix-ooH"/>
                     </connections>
-                </notificationController>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="643"/>
-        </scene>
-        <!--Notification Controller-->
-        <scene sceneID="ZPc-GJ-vnh">
-            <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
-            </objects>
-            <point key="canvasLocation" x="468" y="643"/>
-        </scene>
-        <!--Notification Controller-->
-        <scene sceneID="Niz-AI-uX2">
-            <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModuleProvider="target"/>
-            </objects>
-            <point key="canvasLocation" x="468" y="345"/>
+            <point key="canvasLocation" x="211" y="280"/>
         </scene>
     </scenes>
 </document>

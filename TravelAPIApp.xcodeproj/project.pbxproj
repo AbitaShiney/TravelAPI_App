@@ -23,6 +23,7 @@
 		C1EE9A25223BF77800A9ED26 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EE9A24223BF77800A9ED26 /* NotificationController.swift */; };
 		C1EE9A27223BF77800A9ED26 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EE9A26223BF77800A9ED26 /* ComplicationController.swift */; };
 		C1EE9A29223BF77900A9ED26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1EE9A28223BF77900A9ED26 /* Assets.xcassets */; };
+		ECCD6EE1223D6ADE002BBD3A /* FlightTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCD6EE0223D6ADE002BBD3A /* FlightTableViewController.swift */; };
 		F38DC86273480C38DB0BFAD7 /* Pods_TravelAPIApp_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F91916A313C138ECD3B3634 /* Pods_TravelAPIApp_WatchKit_Extension.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,7 @@
 		CF983B3759F235C19CA01BB8 /* Pods_TravelAPIApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelAPIApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D827CD7DEA503867E87EFBDC /* Pods-TravelAPIApp WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelAPIApp WatchKit App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravelAPIApp WatchKit App/Pods-TravelAPIApp WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		E6CCF1F59ECF731C761E2B62 /* Pods-TravelAPIApp WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelAPIApp WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-TravelAPIApp WatchKit Extension/Pods-TravelAPIApp WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		ECCD6EE0223D6ADE002BBD3A /* FlightTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 				C1EE9A28223BF77900A9ED26 /* Assets.xcassets */,
 				C1EE9A2A223BF77900A9ED26 /* Info.plist */,
 				C1EE9A2B223BF77900A9ED26 /* PushNotificationPayload.apns */,
+				ECCD6EE0223D6ADE002BBD3A /* FlightTableViewController.swift */,
 			);
 			path = "TravelAPIApp WatchKit Extension";
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1EE9A25223BF77800A9ED26 /* NotificationController.swift in Sources */,
+				ECCD6EE1223D6ADE002BBD3A /* FlightTableViewController.swift in Sources */,
 				C1EE9A27223BF77800A9ED26 /* ComplicationController.swift in Sources */,
 				C1EE9A23223BF77800A9ED26 /* ExtensionDelegate.swift in Sources */,
 				C1EE9A21223BF77800A9ED26 /* InterfaceController.swift in Sources */,
@@ -626,7 +630,11 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "TravelAPIApp WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.codewithShiney.TravelAPIApp.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -644,7 +652,11 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "TravelAPIApp WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.codewithShiney.TravelAPIApp.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -700,7 +712,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TravelAPIApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.codewithShiney.TravelAPIApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -715,7 +730,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TravelAPIApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.codewithShiney.TravelAPIApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
