@@ -25,6 +25,7 @@
 		C1EE9A29223BF77900A9ED26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1EE9A28223BF77900A9ED26 /* Assets.xcassets */; };
 		F38DC86273480C38DB0BFAD7 /* Pods_TravelAPIApp_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F91916A313C138ECD3B3634 /* Pods_TravelAPIApp_WatchKit_Extension.framework */; };
 		FCD9BA72223D816300361EFF /* InterfaceCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD9BA71223D816300361EFF /* InterfaceCellController.swift */; };
+		FCD9BA74223D92E400361EFF /* BookFlightInterfaceInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD9BA73223D92E400361EFF /* BookFlightInterfaceInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		D827CD7DEA503867E87EFBDC /* Pods-TravelAPIApp WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelAPIApp WatchKit App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravelAPIApp WatchKit App/Pods-TravelAPIApp WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		E6CCF1F59ECF731C761E2B62 /* Pods-TravelAPIApp WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelAPIApp WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-TravelAPIApp WatchKit Extension/Pods-TravelAPIApp WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
 		FCD9BA71223D816300361EFF /* InterfaceCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceCellController.swift; sourceTree = "<group>"; };
+		FCD9BA73223D92E400361EFF /* BookFlightInterfaceInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookFlightInterfaceInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 				C1EE9A2A223BF77900A9ED26 /* Info.plist */,
 				C1EE9A2B223BF77900A9ED26 /* PushNotificationPayload.apns */,
 				FCD9BA71223D816300361EFF /* InterfaceCellController.swift */,
+				FCD9BA73223D92E400361EFF /* BookFlightInterfaceInterfaceController.swift */,
 			);
 			path = "TravelAPIApp WatchKit Extension";
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 			files = (
 				C1EE9A25223BF77800A9ED26 /* NotificationController.swift in Sources */,
 				C1EE9A27223BF77800A9ED26 /* ComplicationController.swift in Sources */,
+				FCD9BA74223D92E400361EFF /* BookFlightInterfaceInterfaceController.swift in Sources */,
 				FCD9BA72223D816300361EFF /* InterfaceCellController.swift in Sources */,
 				C1EE9A23223BF77800A9ED26 /* ExtensionDelegate.swift in Sources */,
 				C1EE9A21223BF77800A9ED26 /* InterfaceController.swift in Sources */,

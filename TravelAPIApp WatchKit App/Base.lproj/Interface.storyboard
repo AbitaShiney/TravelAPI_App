@@ -29,7 +29,11 @@
                                                     <group width="1" alignment="left" id="1s8-qv-yj8">
                                                         <items>
                                                             <label alignment="left" verticalAlignment="center" text="Price" id="Yqv-a0-rt2"/>
-                                                            <button alignment="right" title="Book " id="3Cy-Nn-yfd"/>
+                                                            <button alignment="right" title="Book " id="3Cy-Nn-yfd">
+                                                                <connections>
+                                                                    <action selector="btnBookClick" destination="wRa-Wl-MaV" id="hI8-65-93N"/>
+                                                                </connections>
+                                                            </button>
                                                         </items>
                                                     </group>
                                                 </items>
@@ -53,6 +57,13 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="211" y="280"/>
+        </scene>
+        <!--bookedInterface-->
+        <scene sceneID="T5L-Ta-Dhf">
+            <objects>
+                <controller identifier="bookedInterface" id="4VX-g6-Wgo" customClass="BookFlightInterfaceInterfaceController" customModule="TravelAPIApp_WatchKit_Extension"/>
+            </objects>
+            <point key="canvasLocation" x="558" y="271"/>
         </scene>
     </scenes>
 </document>

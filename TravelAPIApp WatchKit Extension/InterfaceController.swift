@@ -21,11 +21,13 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
             print("message receive......\(message)")
         
-        self.FlightTable.setNumberOfRows(message.count, withRowType: "flight_cell")
+       
           var index = 0
         
-        let data = message["data"] as! [[String : String]]
+         data = message["data"] as! [[String : String]]
+        print(data.count)
         
+         self.FlightTable.setNumberOfRows(data.count, withRowType: "flight_cell")
         for game in data {
             
             print(game)
@@ -39,16 +41,26 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             row.departCity.setText(game["depatureCity"] )
             row.arrivalCity.setText(game["arrivalCity"] )
             row.price.setText(game["price"] )
+           // row.btnBook
             index = index + 1
             
         }
+        
     }
     
   
     @IBOutlet weak var FlightTable: WKInterfaceTable!
     var session : WCSession?
+     var data: [[String : String]] = []
     
     @IBAction func BookFlightButton() {
+        print("Button click")
+        
+         self.pushController(withName: "bookedInterface", context: self)
+//        session!.sendMessage(["data" : data], replyHandler: nil) { (err) in
+//            print(err.localizedDescription)
+//        }
+        
     }
     
     override func awake(withContext context: Any?) {
