@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController, UIPickerViewDelegate , UIPickerViewDataSource, UITextFieldDelegate{
   
@@ -22,6 +24,25 @@ class ViewController: UIViewController, UIPickerViewDelegate , UIPickerViewDataS
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let URL = "https://5c8d0bf335643b001493895a.mockapi.io/api/v1/Flight/"
+        
+        Alamofire.request(URL).responseJSON {
+            // 1. store the data from the internet in the
+            // response variable
+            response in
+            
+            // 2. get the data out of the variable
+            guard let apiData = response.result.value
+                else {
+                    print("Error getting data from the URL")
+                    return
+            }
+            
+            // OUTPUT the json response to the terminal
+            print("=================")
+            print(apiData)
+        }
+            
         // Do any additional setup after loading the view, typically from a nib.
        
 //        toTextField.delegate = self
