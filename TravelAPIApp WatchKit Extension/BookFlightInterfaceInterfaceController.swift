@@ -14,14 +14,44 @@ import WatchConnectivity
 class BookFlightInterfaceInterfaceController: WKInterfaceController, WCSessionDelegate {
     
     @IBOutlet weak var BookedFlightsTabel: WKInterfaceTable!
-    var data: [[String : String]] = []
 
-     var session : WCSession?
+    var data : [[String: String]] = []
+    var dataSub : [[String : String]] = []
+    var session : WCSession?
+    var interFace : InterfaceController!
+    var bookedList : [[String:String]] = []
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        // Configure interface objects here.        
+        interFace = context as! InterfaceController
+        var data :  [[String : String]] = []
+        data = interFace.data
+        print(data.count)
+        //   bookedList = []
+        for game in data{
+            print("got a new booked data")
+            if(game["airlines"] == "airlines 1"){
+                bookedList.append(game)
+            }
+    }
+        var index = 0
+        if(bookedList.count == 0){
+            self.BookedFlightsTabel.setNumberOfRows(1, withRowType: "booked_cell")
+            let row = self.BookedFlightsTabel.rowController(at: index) as! BookFlightCellController
+            row.airlinesLabel.setText("NO Flights Booked ")
+            print("NO Flights Booked")
+        }else{
+            self.BookedFlightsTabel.setNumberOfRows(bookedList.count, withRowType: "BookedFlights")
+            for game in bookedList {
+                
+                let row = self.BookedFlightsTabel.rowController(at: index) as! BookFlightCellController
+                row.airlinesLabel.setText(game["airlines"] )
+                print("airlines data...........")
+                index = index + 1
+            }
+            
+        }
     }
 
     override func willActivate() {
@@ -51,11 +81,40 @@ class BookFlightInterfaceInterfaceController: WKInterfaceController, WCSessionDe
     
     //MARK: Stub for session
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        
+         print("Book message received")
     }
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
             print("message receive in booked ticket")
+        dataSub = data
+        data = message["data"] as! [[String : String]]
+        print(data.count)
+        interFace.data = data
+        bookedList = []
+        for game in data{
+            print("got a new booked data")
+            //            if(game["airlines"] == nil){
+            //                bookedList.append(game)
+            //            }
+        }
+        var index = 0
+        if(bookedList.count == 0){
+            self.BookedFlightsTabel.setNumberOfRows(1, withRowType: "booked_cell")
+            let row = self.BookedFlightsTabel.rowController(at: index) as! BookFlightCellController
+            row.airlinesLabel.setText("NO GAMES ")
+            print("no games")
+        }else{
+            self.BookedFlightsTabel.setNumberOfRows(bookedList.count, withRowType: "booked_cell")
+            for game in bookedList {
+                
+                let row = self.BookedFlightsTabel.rowController(at: index) as! BookFlightCellController
+                row.airlinesLabel.setText(game["airlines"] )
+                print("airlines data...........")
+                index = index + 1
+            }
+            
+        }
         
     }
+    }
 
-}
+
