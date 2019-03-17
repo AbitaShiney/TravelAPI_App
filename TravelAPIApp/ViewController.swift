@@ -12,10 +12,6 @@ import SwiftyJSON
 import WatchConnectivity
 
 class ViewController: UIViewController, UIPickerViewDelegate , UIPickerViewDataSource, UITextFieldDelegate, WCSessionDelegate{
-   
-    
-  
-    
 
     @IBOutlet weak var toTextField: UITextField!
     
@@ -28,7 +24,7 @@ class ViewController: UIViewController, UIPickerViewDelegate , UIPickerViewDataS
     var jsonResponse = JSON()
     var cityList = JSON()
     //var resultData = JSON()
-     var wcSession : WCSession!
+    var wcSession : WCSession!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,44 +42,28 @@ class ViewController: UIViewController, UIPickerViewDelegate , UIPickerViewDataS
             
             // 2. get the data out of the variable
             guard let apiData = response.result.value
-                else {
-                    print("Error getting data from the URL")
-                    return
+            else {
+                print("Error getting data from the URL")
+                return
             }
             
             // OUTPUT the json response to the terminal
             print("=================")
            // print(apiData)
             // GET something out of the JSON response
-             self.jsonResponse = JSON(apiData)
-            
-            
-            
-             self.cityList = self.jsonResponse["items"]
-            
-
+            self.jsonResponse = JSON(apiData)
+            self.cityList = self.jsonResponse["items"]
             
             for (key, value1) in self.cityList{
 
-
                // print(value1["depatureCity"])
                 self.toData.append(value1["depatureCity"].string!)
-                 self.arrivalData.append(value1["arrivalCity"].string!)
+                self.arrivalData.append(value1["arrivalCity"].string!)
                 
-            
             }
-            
         }
-            
-
-        
     }
-
     //MARK: Picker view Stubs
-    
-   
-    
-    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -110,11 +90,8 @@ class ViewController: UIViewController, UIPickerViewDelegate , UIPickerViewDataS
             arrivalTextField.text = arrivalData[row]
             self.view.endEditing(true)
         }
-        
-        
-       
-       
     }
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if currentTextField == toTextField{
             return toData[row]
@@ -130,6 +107,7 @@ class ViewController: UIViewController, UIPickerViewDelegate , UIPickerViewDataS
         pickerView.delegate = self
         pickerView.dataSource = self
         currentTextField = textField
+        
         if currentTextField == toTextField{
             currentTextField.inputView = pickerView
         }
@@ -137,8 +115,6 @@ class ViewController: UIViewController, UIPickerViewDelegate , UIPickerViewDataS
             currentTextField.inputView = pickerView
         }
     }
-
-    
     
     //MARK: WCsession or watch connectivity stubs
     
@@ -163,14 +139,14 @@ class ViewController: UIViewController, UIPickerViewDelegate , UIPickerViewDataS
                 dataSend.append(tempArray)
                 
                 wcSession.sendMessage(["data": dataSend], replyHandler: nil) { (err) in
-                            print(err.localizedDescription)
-                        }
+                    print(err.localizedDescription)
+                }
             }
-            
-            
-            
         }
         
+//        func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+//            let receivedGlobal = applicationContext["my_global"] as?
+//        }
         
         
 //        wcSession.sendMessage(resultData, replyHandler: nil) { (err) in

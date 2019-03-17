@@ -30,12 +30,7 @@
                                                     <label alignment="center" text="Arrival City" id="Rp1-WR-ILW"/>
                                                     <group width="1" alignment="left" id="1s8-qv-yj8">
                                                         <items>
-                                                            <label alignment="left" verticalAlignment="center" text="Price" id="Yqv-a0-rt2"/>
-                                                            <button alignment="right" title="Book " id="3Cy-Nn-yfd">
-                                                                <connections>
-                                                                    <action selector="BookFlightButton" destination="AgC-eL-Hgc" id="QaL-47-a8H"/>
-                                                                </connections>
-                                                            </button>
+                                                            <label alignment="center" verticalAlignment="center" text="Price" id="Yqv-a0-rt2"/>
                                                         </items>
                                                     </group>
                                                 </items>
@@ -45,7 +40,6 @@
                                     <connections>
                                         <outlet property="airlineName" destination="fyI-G8-fM3" id="4TP-b6-2KR"/>
                                         <outlet property="arrivalCity" destination="Rp1-WR-ILW" id="PdT-7u-p1E"/>
-                                        <outlet property="btnBook" destination="3Cy-Nn-yfd" id="jLJ-05-f2U"/>
                                         <outlet property="departCity" destination="ao3-gB-Kwb" id="80z-77-alz"/>
                                         <outlet property="price" destination="Yqv-a0-rt2" id="Bww-xN-n4M"/>
                                     </connections>
@@ -77,7 +71,7 @@
                                             <label alignment="center" text="Departure City" id="TCa-7h-oQk"/>
                                             <label alignment="center" text="To" id="geQ-VS-lbV"/>
                                             <label alignment="center" text="Arrival City" id="4ru-Ij-oQR"/>
-                                            <label alignment="center" text="Departure Date" id="JbJ-cB-PId"/>
+                                            <label alignment="center" text="Departure Date" numberOfLines="2" minimumScaleFactor="0.90000000000000002" id="JbJ-cB-PId"/>
                                         </items>
                                     </group>
                                     <connections>

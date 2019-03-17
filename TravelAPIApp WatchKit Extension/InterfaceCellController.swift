@@ -18,7 +18,4 @@ class InterfaceCellController: NSObject {
     
     @IBOutlet weak var price: WKInterfaceLabel!
     
-    @IBOutlet weak var btnBook: WKInterfaceButton!
-    
-   
 }

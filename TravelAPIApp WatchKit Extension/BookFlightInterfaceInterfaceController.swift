@@ -27,46 +27,38 @@ class BookFlightInterfaceInterfaceController: WKInterfaceController, WCSessionDe
         interFace = context as? InterfaceController
         var data :  [[String : String]] = []
         data = interFace.data
-       // print(data.count)
-        //   bookedList = []
-        for game in data{
-            print("got a new booked data")
-           // if(game["airlines"] == "airlines 1"){
-                bookedList.append(game)
-          //  print(bookedList)
-           // }
-          }
+        
+        for game in data
+        {
+            print("Got a new booked data \(game)")
+            bookedList.append(game)
+        }
+        
         print("-----\(bookedList.count)")
-         var index = 0
+        var index = 0
         if(bookedList.count == 0){
+            
             self.BookedFlightsTabel.setNumberOfRows(1, withRowType: "booked_cell")
             let row = self.BookedFlightsTabel.rowController(at: index) as! BookFlightCellController
             row.airlinesLabel.setText("NO Flights Booked ")
             print("NO Flights Booked")
-        }else{
+            
+        }
+        else{
             self.BookedFlightsTabel.setNumberOfRows(bookedList.count, withRowType: "booked_cell")
             for flights in bookedList {
 
-                print(flights)
-                print(index)
+                print("flights: \(flights)")
+                print("index: \(index)")
                 let row = self.BookedFlightsTabel.rowController(at: index) as! BookFlightCellController
                 
                 row.airlinesLabel.setText(flights["airlines"])
-                 row.arrivalCity.setText(flights["arrivalCity"])
-                 row.deptCity.setText(flights["depatureCity"])
-                 row.deptDate.setText(flights["depatureDate"])
-                //            print("inside")
-//                row.airlineName.setText(flight["airlines"] )
-//                row.departCity.setText(flight["depatureCity"] )
-//                row.arrivalCity.setText(flight["arrivalCity"] )
-//                row.price.setText("$\(flight["price"]!)")
-//                let row = self.BookedFlightsTabel.rowController(at: index) as! BookFlightCellController
-//                row.airlinesLabel.setText(flights["airlines"] )
-//                print("airlines data...........")
+                row.arrivalCity.setText(flights["arrivalCity"])
+                row.deptCity.setText(flights["depatureCity"])
+                row.deptDate.setText(flights["depatureDate"])
                 index = index + 1
             }
-//
-      }
+        }
     }
 
     override func willActivate() {
@@ -75,18 +67,6 @@ class BookFlightInterfaceInterfaceController: WKInterfaceController, WCSessionDe
         session = WCSession.default
         session?.delegate = self
         session?.activate()
-        
-//        let sharedPreferences = UserDefaults.standard
-//        var flight = sharedPreferences.string(forKey: "data")
-//
-//        if (flight == nil) {
-//
-//            print("No airlines found")
-//        }
-//        else {
-//            print("I found airlines: \(flight!)")
-//
-//        }
     }
 
     override func didDeactivate() {
@@ -99,7 +79,9 @@ class BookFlightInterfaceInterfaceController: WKInterfaceController, WCSessionDe
          print("Book message received")
     }
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-            print("message receive in booked ticket")
+        
+        print("message receive in booked ticket")
+        
         dataSub = data
         data = message["data"] as! [[String : String]]
         print(data.count)
@@ -121,7 +103,7 @@ class BookFlightInterfaceInterfaceController: WKInterfaceController, WCSessionDe
         }else{
             self.BookedFlightsTabel.setNumberOfRows(bookedList.count, withRowType: "booked_cell")
             for game in bookedList {
-                
+
                 let row = self.BookedFlightsTabel.rowController(at: index) as! BookFlightCellController
                // row.airlinesLabel.setText(game["airlines"] )
                 row.airlinesLabel.setText(game["airlines"])
@@ -131,10 +113,10 @@ class BookFlightInterfaceInterfaceController: WKInterfaceController, WCSessionDe
                 print("airlines data...........")
                 index = index + 1
             }
-            
+        
         }
         
     }
-    }
+}
 
 
