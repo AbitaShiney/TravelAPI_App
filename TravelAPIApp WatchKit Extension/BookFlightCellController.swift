@@ -11,4 +11,10 @@ import WatchKit
 class BookFlightCellController: NSObject {
 
     @IBOutlet weak var airlinesLabel: WKInterfaceLabel!
+    
+    @IBOutlet weak var deptCity: WKInterfaceLabel!
+    
+    @IBOutlet weak var arrivalCity: WKInterfaceLabel!
+    
+    @IBOutlet weak var deptDate: WKInterfaceLabel!
 }

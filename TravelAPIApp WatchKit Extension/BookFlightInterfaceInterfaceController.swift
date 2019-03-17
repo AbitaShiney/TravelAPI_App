@@ -24,34 +24,49 @@ class BookFlightInterfaceInterfaceController: WKInterfaceController, WCSessionDe
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        interFace = context as! InterfaceController
+        interFace = context as? InterfaceController
         var data :  [[String : String]] = []
         data = interFace.data
-        print(data.count)
+       // print(data.count)
         //   bookedList = []
         for game in data{
             print("got a new booked data")
-            if(game["airlines"] == "airlines 1"){
+           // if(game["airlines"] == "airlines 1"){
                 bookedList.append(game)
-            }
-    }
-        var index = 0
+          //  print(bookedList)
+           // }
+          }
+        print("-----\(bookedList.count)")
+         var index = 0
         if(bookedList.count == 0){
             self.BookedFlightsTabel.setNumberOfRows(1, withRowType: "booked_cell")
             let row = self.BookedFlightsTabel.rowController(at: index) as! BookFlightCellController
             row.airlinesLabel.setText("NO Flights Booked ")
             print("NO Flights Booked")
         }else{
-            self.BookedFlightsTabel.setNumberOfRows(bookedList.count, withRowType: "BookedFlights")
-            for game in bookedList {
-                
+            self.BookedFlightsTabel.setNumberOfRows(bookedList.count, withRowType: "booked_cell")
+            for flights in bookedList {
+
+                print(flights)
+                print(index)
                 let row = self.BookedFlightsTabel.rowController(at: index) as! BookFlightCellController
-                row.airlinesLabel.setText(game["airlines"] )
-                print("airlines data...........")
+                
+                row.airlinesLabel.setText(flights["airlines"])
+                 row.arrivalCity.setText(flights["arrivalCity"])
+                 row.deptCity.setText(flights["depatureCity"])
+                 row.deptDate.setText(flights["depatureDate"])
+                //            print("inside")
+//                row.airlineName.setText(flight["airlines"] )
+//                row.departCity.setText(flight["depatureCity"] )
+//                row.arrivalCity.setText(flight["arrivalCity"] )
+//                row.price.setText("$\(flight["price"]!)")
+//                let row = self.BookedFlightsTabel.rowController(at: index) as! BookFlightCellController
+//                row.airlinesLabel.setText(flights["airlines"] )
+//                print("airlines data...........")
                 index = index + 1
             }
-            
-        }
+//
+      }
     }
 
     override func willActivate() {
@@ -61,17 +76,17 @@ class BookFlightInterfaceInterfaceController: WKInterfaceController, WCSessionDe
         session?.delegate = self
         session?.activate()
         
-        let sharedPreferences = UserDefaults.standard
-        var flight = sharedPreferences.string(forKey: "data")
-        
-        if (flight == nil) {
-
-            print("No airlines found")
-        }
-        else {
-            print("I found airlines: \(flight!)")
-            
-        }
+//        let sharedPreferences = UserDefaults.standard
+//        var flight = sharedPreferences.string(forKey: "data")
+//
+//        if (flight == nil) {
+//
+//            print("No airlines found")
+//        }
+//        else {
+//            print("I found airlines: \(flight!)")
+//
+//        }
     }
 
     override func didDeactivate() {
@@ -92,6 +107,7 @@ class BookFlightInterfaceInterfaceController: WKInterfaceController, WCSessionDe
         bookedList = []
         for game in data{
             print("got a new booked data")
+              bookedList.append(game)
             //            if(game["airlines"] == nil){
             //                bookedList.append(game)
             //            }
@@ -107,7 +123,11 @@ class BookFlightInterfaceInterfaceController: WKInterfaceController, WCSessionDe
             for game in bookedList {
                 
                 let row = self.BookedFlightsTabel.rowController(at: index) as! BookFlightCellController
-                row.airlinesLabel.setText(game["airlines"] )
+               // row.airlinesLabel.setText(game["airlines"] )
+                row.airlinesLabel.setText(game["airlines"])
+                row.arrivalCity.setText(game["arrivalCity"])
+                row.deptCity.setText(game["depatureCity"])
+                row.deptDate.setText(game["depatureDate"])
                 print("airlines data...........")
                 index = index + 1
             }

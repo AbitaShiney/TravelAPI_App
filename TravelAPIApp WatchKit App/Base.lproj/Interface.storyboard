@@ -34,7 +34,6 @@
                                                             <button alignment="right" title="Book " id="3Cy-Nn-yfd">
                                                                 <connections>
                                                                     <action selector="BookFlightButton" destination="AgC-eL-Hgc" id="QaL-47-a8H"/>
-                                                                    <segue destination="4VX-g6-Wgo" kind="push" id="7tg-rw-EtP"/>
                                                                 </connections>
                                                             </button>
                                                         </items>
@@ -82,7 +81,10 @@
                                         </items>
                                     </group>
                                     <connections>
-                                        <outlet property="airlinesLabel" destination="2Pq-jw-3NJ" id="NrO-WC-XqL"/>
+                                        <outlet property="airlinesLabel" destination="2Pq-jw-3NJ" id="nXN-Ig-8nY"/>
+                                        <outlet property="arrivalCity" destination="4ru-Ij-oQR" id="1UN-Zr-f1L"/>
+                                        <outlet property="deptCity" destination="TCa-7h-oQk" id="Rhc-jB-8pE"/>
+                                        <outlet property="deptDate" destination="JbJ-cB-PId" id="Nmf-KT-bgh"/>
                                     </connections>
                                 </tableRow>
                             </items>

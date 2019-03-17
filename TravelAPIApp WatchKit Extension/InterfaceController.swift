@@ -15,11 +15,11 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
    //var data : [[String: String]] = []
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-         print("message receive")
+       //  print("message receive")
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        print("message receive......\(message)")
+      //  print("message receive......\(message)")
         
         var index = 0
         
@@ -29,7 +29,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         self.FlightTable.setNumberOfRows(data.count, withRowType: "flight_cell")
         for flight in data {
             
-            print("Flight: \(flight)")
+           // print("Flight: \(flight)")
            
             let row = self.FlightTable.rowController(at: index) as! InterfaceCellController
             
