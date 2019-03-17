@@ -70,17 +70,24 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         
     }
     
-    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
-        pushController(withName: "BookFlightInterfaceController",
-                               context: data[rowIndex-1])
-    }
+//    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
+//        pushController(withName: "BookFlightInterfaceController",
+//                               context: data[rowIndex-1])
+//    }
     
+    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
+       // let flightData = data[rowIndex]
+        pushController(withName: "bookedInterface", context: self)
+    }
+
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        for index in 0..<FlightTable.numberOfRows {
+            guard let controller = FlightTable.rowController(at: index) as? BookFlightInterfaceInterfaceController else { continue }
+            controller.data = [data[index]]
         
-        // Configure interface objects here.
     }
-    
+    }
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
