@@ -14,7 +14,7 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="TravelAPIApp_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label height="20" alignment="left" text="Book Flight" id="vNh-Bp-9oK">
+                        <label height="20" alignment="center" text="Book Flight" id="vNh-Bp-9oK">
                             <color key="textColor" red="0.97233899109999999" green="0.41894304519999997" blue="0.14408501700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </label>
                         <table alignment="left" id="QX8-Sp-1bP">
@@ -66,7 +66,7 @@
             <objects>
                 <controller identifier="bookedInterface" id="4VX-g6-Wgo" customClass="BookFlightInterfaceInterfaceController" customModule="TravelAPIApp_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Booked Flights" id="T51-it-T2C">
+                        <label alignment="center" text="Booked Flights" id="T51-it-T2C">
                             <color key="textColor" red="0.97233899109999999" green="0.41894304519999997" blue="0.14408501700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </label>
                         <table alignment="left" id="PWz-7y-4U7">
@@ -103,6 +103,7 @@
                         <label alignment="left" text="Alert Label" id="Nvi-vu-eAK"/>
                     </items>
                     <notificationCategory key="notificationCategory" id="Sv1-s6-LdS"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
                         <outlet property="notificationAlertLabel" destination="Nvi-vu-eAK" id="N98-Wd-6Pp"/>
                     </connections>

@@ -26,7 +26,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         data = message["data"] as! [[String : String]]
         print("Rows:\(data.count)")
         
-        self.FlightTable.setNumberOfRows(2, withRowType: "flight_cell")
+        self.FlightTable.setNumberOfRows(data.count, withRowType: "flight_cell")
         for flight in data {
             
             print("Flight: \(flight)")
