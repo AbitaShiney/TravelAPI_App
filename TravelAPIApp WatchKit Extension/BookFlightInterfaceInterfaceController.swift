@@ -13,14 +13,15 @@ import WatchConnectivity
 
 class BookFlightInterfaceInterfaceController: WKInterfaceController, WCSessionDelegate {
     
-    
+    @IBOutlet weak var BookedFlightsTabel: WKInterfaceTable!
+    var data: [[String : String]] = []
 
      var session : WCSession?
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        // Configure interface objects here.
+        // Configure interface objects here.        
     }
 
     override func willActivate() {
@@ -30,6 +31,17 @@ class BookFlightInterfaceInterfaceController: WKInterfaceController, WCSessionDe
         session?.delegate = self
         session?.activate()
         
+        let sharedPreferences = UserDefaults.standard
+        var flight = sharedPreferences.string(forKey: "data")
+        
+        if (flight == nil) {
+
+            print("No airlines found")
+        }
+        else {
+            print("I found airlines: \(flight!)")
+            
+        }
     }
 
     override func didDeactivate() {
@@ -43,6 +55,7 @@ class BookFlightInterfaceInterfaceController: WKInterfaceController, WCSessionDe
     }
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
             print("message receive in booked ticket")
+        
     }
 
 }

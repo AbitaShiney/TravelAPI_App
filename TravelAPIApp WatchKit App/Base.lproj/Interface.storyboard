@@ -23,15 +23,16 @@
                                             <group width="1" alignment="left" layout="vertical" id="nL3-Xr-uLu">
                                                 <items>
                                                     <label alignment="center" text="Airlines" id="fyI-G8-fM3"/>
-                                                    <label alignment="center" text="DepartureCity" id="ao3-gB-Kwb"/>
+                                                    <label alignment="center" text="Departure City" id="ao3-gB-Kwb"/>
                                                     <label alignment="center" text="To" id="3dF-94-FRc"/>
-                                                    <label alignment="center" text="ArrivalCity" id="Rp1-WR-ILW"/>
+                                                    <label alignment="center" text="Arrival City" id="Rp1-WR-ILW"/>
                                                     <group width="1" alignment="left" id="1s8-qv-yj8">
                                                         <items>
                                                             <label alignment="left" verticalAlignment="center" text="Price" id="Yqv-a0-rt2"/>
                                                             <button alignment="right" title="Book " id="3Cy-Nn-yfd">
                                                                 <connections>
-                                                                    <action selector="btnBookClick" destination="wRa-Wl-MaV" id="hI8-65-93N"/>
+                                                                    <action selector="BookFlightButton" destination="AgC-eL-Hgc" id="QaL-47-a8H"/>
+                                                                    <segue destination="4VX-g6-Wgo" kind="push" id="7tg-rw-EtP"/>
                                                                 </connections>
                                                             </button>
                                                         </items>
@@ -56,14 +57,53 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="211" y="280"/>
+            <point key="canvasLocation" x="211" y="279.5"/>
         </scene>
         <!--bookedInterface-->
         <scene sceneID="T5L-Ta-Dhf">
             <objects>
-                <controller identifier="bookedInterface" id="4VX-g6-Wgo" customClass="BookFlightInterfaceInterfaceController" customModule="TravelAPIApp_WatchKit_Extension"/>
+                <controller identifier="bookedInterface" id="4VX-g6-Wgo" customClass="BookFlightInterfaceInterfaceController" customModule="TravelAPIApp_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="PWz-7y-4U7">
+                            <items>
+                                <tableRow identifier="booked_cell" id="QEw-Ei-xQ6" customClass="BookFlightCellController" customModule="TravelAPIApp_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="7gv-Vh-DBU">
+                                        <items>
+                                            <label alignment="center" text="Airlines" id="2Pq-jw-3NJ"/>
+                                            <label alignment="center" text="Departure City" id="TCa-7h-oQk"/>
+                                            <label alignment="center" text="To" id="geQ-VS-lbV"/>
+                                            <label alignment="center" text="Arrival City" id="4ru-Ij-oQR"/>
+                                            <label alignment="center" text="Departure Date" id="JbJ-cB-PId"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="airlinesLabel" destination="2Pq-jw-3NJ" id="NrO-WC-XqL"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="BookedFlightsTabel" destination="PWz-7y-4U7" id="fdQ-gd-CfW"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="558" y="271"/>
+            <point key="canvasLocation" x="572" y="279"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="rfz-Qh-vzi">
+            <objects>
+                <notificationController id="iey-6J-3Oq">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="Nvi-vu-eAK"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" id="Sv1-s6-LdS"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="Nvi-vu-eAK" id="N98-Wd-6Pp"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="319" y="-35"/>
         </scene>
     </scenes>
 </document>
