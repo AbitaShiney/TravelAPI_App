@@ -94,9 +94,9 @@
         <!--Static Notification Interface Controller-->
         <scene sceneID="rfz-Qh-vzi">
             <objects>
-                <notificationController id="iey-6J-3Oq">
+                <notificationController id="iey-6J-3Oq" customClass="NotificationController" customModule="TravelAPIApp_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Alert Label" id="Nvi-vu-eAK"/>
+                        <label width="1" alignment="left" text="Alert Label" numberOfLines="3" id="Nvi-vu-eAK"/>
                     </items>
                     <notificationCategory key="notificationCategory" id="Sv1-s6-LdS"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

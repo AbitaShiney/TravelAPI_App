@@ -17,6 +17,7 @@ class ViewController: UIViewController, UIPickerViewDelegate , UIPickerViewDataS
     
     @IBOutlet weak var arrivalTextField: UITextField!
     
+    @IBOutlet weak var outputLabel: UILabel!
     var toData:[String] = []
      var arrivalData:[String] = []
     var pickerView = UIPickerView()
@@ -144,15 +145,17 @@ class ViewController: UIViewController, UIPickerViewDelegate , UIPickerViewDataS
             }
         }
         
-//        func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
-//            let receivedGlobal = applicationContext["my_global"] as?
-//        }
+    func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : String]) {
+//            let data = applicationContext["data"]
         
+        let data = applicationContext["airlines"] as? String
+        print("Data : \(data)")
+            self.outputLabel.text = data!            //Use this to update the UI instantaneously (otherwise, takes a little while)
+            //dispatch_async(dispatch_get_main_queue()) {
+              //  self.emojiLabel.text = "Last emoji: " + emoji!
+            //}
+        }
         
-//        wcSession.sendMessage(resultData, replyHandler: nil) { (err) in
-//            print(err.localizedDescription)
-//        }
-//
     }
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         

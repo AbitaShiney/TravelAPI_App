@@ -46,9 +46,23 @@ class BookFlightInterfaceInterfaceController: WKInterfaceController, WCSessionDe
         }
         else{
             self.BookedFlightsTabel.setNumberOfRows(bookedList.count, withRowType: "booked_cell")
-            for flights in bookedList {
-
+            for flights in bookedList
+            {
                 print("flights: \(flights)")
+//                let applicationDict = ["airlines":flights["airlines"]]
+//                print("applicationDict: \(applicationDict)")
+//                do {
+//                    try session?.updateApplicationContext(applicationDict as [String : Any])
+//                } catch {
+//                    print("error")
+//                }
+                let msg = ["StringValueSentFromiWatch" : "Hello World"]
+                session?.sendMessage(msg, replyHandler: { (replay) -> Void in
+                    print("apple watch sent")
+                }) { (error) -> Void in
+                    print("apple watch sent error")
+                }
+                
                 print("index: \(index)")
                 let row = self.BookedFlightsTabel.rowController(at: index) as! BookFlightCellController
                 
@@ -56,11 +70,13 @@ class BookFlightInterfaceInterfaceController: WKInterfaceController, WCSessionDe
                 row.arrivalCity.setText(flights["arrivalCity"])
                 row.deptCity.setText(flights["depatureCity"])
                 row.deptDate.setText(flights["depatureDate"])
+                
                 index = index + 1
+                
             }
         }
     }
-
+  
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
@@ -90,9 +106,6 @@ class BookFlightInterfaceInterfaceController: WKInterfaceController, WCSessionDe
         for game in data{
             print("got a new booked data")
               bookedList.append(game)
-            //            if(game["airlines"] == nil){
-            //                bookedList.append(game)
-            //            }
         }
         var index = 0
         if(bookedList.count == 0){
@@ -104,16 +117,15 @@ class BookFlightInterfaceInterfaceController: WKInterfaceController, WCSessionDe
             self.BookedFlightsTabel.setNumberOfRows(bookedList.count, withRowType: "booked_cell")
             for game in bookedList {
 
-                let row = self.BookedFlightsTabel.rowController(at: index) as! BookFlightCellController
-               // row.airlinesLabel.setText(game["airlines"] )
-                row.airlinesLabel.setText(game["airlines"])
-                row.arrivalCity.setText(game["arrivalCity"])
-                row.deptCity.setText(game["depatureCity"])
-                row.deptDate.setText(game["depatureDate"])
-                print("airlines data...........")
-                index = index + 1
+            let row = self.BookedFlightsTabel.rowController(at: index) as! BookFlightCellController
+           // row.airlinesLabel.setText(game["airlines"] )
+            row.airlinesLabel.setText(game["airlines"])
+            row.arrivalCity.setText(game["arrivalCity"])
+            row.deptCity.setText(game["depatureCity"])
+            row.deptDate.setText(game["depatureDate"])
+            print("airlines data...........")
+            index = index + 1
             }
-        
         }
         
     }

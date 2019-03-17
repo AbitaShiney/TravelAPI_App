@@ -45,6 +45,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
        // let flightData = data[rowIndex]
         pushController(withName: "bookedInterface", context: self)
+    
     }
 
     override func awake(withContext context: Any?) {
