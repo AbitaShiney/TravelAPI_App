@@ -10,6 +10,8 @@ import WatchKit
 
 class InterfaceCellController: NSObject {
 
+    @IBOutlet weak var departureDate: WKInterfaceLabel!
+    
     @IBOutlet weak var airlineName: WKInterfaceLabel!
     
     @IBOutlet weak var departCity: WKInterfaceLabel!

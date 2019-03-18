@@ -33,6 +33,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             // print("Flight: \(flight)")
             let row = self.FlightTable.rowController(at: index) as! InterfaceCellController
             
+            row.departureDate.setText(flight["depatureDate"])
             row.airlineName.setText(flight["airlines"] )
             row.departCity.setText(flight["depatureCity"] )
             row.arrivalCity.setText(flight["arrivalCity"] )
@@ -44,8 +45,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
        // let flightData = data[rowIndex]
-        pushController(withName: "bookedInterface", context: self)
-    
+        pushController(withName: "bookedInterface", context: self)    
     }
 
     override func awake(withContext context: Any?) {

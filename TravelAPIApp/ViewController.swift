@@ -144,18 +144,11 @@ class ViewController: UIViewController, UIPickerViewDelegate , UIPickerViewDataS
                 }
             }
         }
-        
-    func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : String]) {
-//            let data = applicationContext["data"]
-        
-        let data = applicationContext["airlines"] as? String
-        print("Data : \(data)")
-            self.outputLabel.text = data!            //Use this to update the UI instantaneously (otherwise, takes a little while)
-            //dispatch_async(dispatch_get_main_queue()) {
-              //  self.emojiLabel.text = "Last emoji: " + emoji!
-            //}
+    }
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        DispatchQueue.main.async {
+            self.outputLabel.text = "Message : \(message)"
         }
-        
     }
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         

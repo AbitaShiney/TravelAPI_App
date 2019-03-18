@@ -40,11 +40,42 @@ class NotificationController: WKUserNotificationInterfaceController {
         
       
     }
-    override func didReceive(_ localNotification: UILocalNotification, withCompletion completionHandler: @escaping (WKUserNotificationInterfaceType) -> Void) {
-//        outputText.setText("Get Ready for Flight")
-        completionHandler(.custom)
-        outputText.setText("Get Ready for Flight")
-       
+//    override func didReceive(_ localNotification: UILocalNotification, withCompletion completionHandler: @escaping (WKUserNotificationInterfaceType) -> Void) {
+//
+//        if let aps = localNotification["aps"] as? NSDictionary
+//        {
+//
+//        }
+//
+//    }
+    
+    override func didReceiveRemoteNotification(_ remoteNotification: [AnyHashable : Any], withCompletion completionHandler: @escaping (WKUserNotificationInterfaceType) -> Void) {
+        
+        let date1 = Date()
+        
+        let calendar1 = Calendar.current
+        
+        let day1 = calendar1.component(.day, from: date1)
+        
+        let year1 = calendar1.component(.year, from: date1)
+        
+        let month1 = calendar1.component(.month, from: date1)
+        
+        let hour1 = calendar1.component(.hour, from: date1)
+        print("Hour: \(hour1)")
+        let minutes1 = calendar1.component(.minute, from: date1)
+        if let aps = remoteNotification["aps"] as? NSDictionary {
+            if let title = aps["title"] as? String {
+                outputText.setText(title)
+            }
+        }
+        if let hour = remoteNotification["hour"] as? NSDictionary {
+            if let title = hour["title"] as? String {
+                outputText.setText(title)
+            }
+        }
+        completionHandler(WKUserNotificationInterfaceType.custom)
     }
+    
    
 }

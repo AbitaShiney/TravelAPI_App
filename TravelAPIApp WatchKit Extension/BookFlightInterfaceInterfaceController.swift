@@ -56,12 +56,7 @@ class BookFlightInterfaceInterfaceController: WKInterfaceController, WCSessionDe
 //                } catch {
 //                    print("error")
 //                }
-                let msg = ["StringValueSentFromiWatch" : "Hello World"]
-                session?.sendMessage(msg, replyHandler: { (replay) -> Void in
-                    print("apple watch sent")
-                }) { (error) -> Void in
-                    print("apple watch sent error")
-                }
+                
                 
                 print("index: \(index)")
                 let row = self.BookedFlightsTabel.rowController(at: index) as! BookFlightCellController
@@ -72,7 +67,6 @@ class BookFlightInterfaceInterfaceController: WKInterfaceController, WCSessionDe
                 row.deptDate.setText(flights["depatureDate"])
                 
                 index = index + 1
-                
             }
         }
     }
@@ -94,6 +88,7 @@ class BookFlightInterfaceInterfaceController: WKInterfaceController, WCSessionDe
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
          print("Book message received")
     }
+    
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         
         print("message receive in booked ticket")
@@ -128,6 +123,20 @@ class BookFlightInterfaceInterfaceController: WKInterfaceController, WCSessionDe
             }
         }
         
+    }
+    
+    var count = 0
+    @IBAction func sendToPhoneButton() {
+        
+        print("BookedList: \(bookedList)")
+        let msg = ["Count" : "\(bookedList)"]
+        print("msg: \(msg)")
+        if session!.isReachable {
+            session!.sendMessage(msg, replyHandler: nil, errorHandler: { (error) -> Void in
+                print("Error handler: \(error)")
+            })
+            count += 1
+        }
     }
 }
 

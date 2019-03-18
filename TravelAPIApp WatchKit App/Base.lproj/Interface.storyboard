@@ -25,6 +25,7 @@
                                             <group width="1" alignment="left" layout="vertical" id="nL3-Xr-uLu">
                                                 <items>
                                                     <label alignment="center" text="Airlines" id="fyI-G8-fM3"/>
+                                                    <label width="1" alignment="center" text="Departure Date" id="DUJ-Si-3wN"/>
                                                     <label alignment="center" text="Departure City" id="ao3-gB-Kwb"/>
                                                     <label alignment="center" text="To" id="3dF-94-FRc"/>
                                                     <label alignment="center" text="Arrival City" id="Rp1-WR-ILW"/>
@@ -41,6 +42,7 @@
                                         <outlet property="airlineName" destination="fyI-G8-fM3" id="4TP-b6-2KR"/>
                                         <outlet property="arrivalCity" destination="Rp1-WR-ILW" id="PdT-7u-p1E"/>
                                         <outlet property="departCity" destination="ao3-gB-Kwb" id="80z-77-alz"/>
+                                        <outlet property="departureDate" destination="DUJ-Si-3wN" id="yJ3-Zo-e93"/>
                                         <outlet property="price" destination="Yqv-a0-rt2" id="Bww-xN-n4M"/>
                                     </connections>
                                 </tableRow>
@@ -83,6 +85,11 @@
                                 </tableRow>
                             </items>
                         </table>
+                        <button width="1" alignment="left" title="Send to Phone" id="RiQ-zK-4Us">
+                            <connections>
+                                <action selector="sendToPhoneButton" destination="4VX-g6-Wgo" id="bnb-jG-qgS"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="BookedFlightsTabel" destination="PWz-7y-4U7" id="fdQ-gd-CfW"/>
@@ -102,10 +109,26 @@
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
                         <outlet property="notificationAlertLabel" destination="Nvi-vu-eAK" id="N98-Wd-6Pp"/>
+                        <segue destination="leK-5Q-jWt" kind="relationship" relationship="dynamicNotificationInterface" id="E2f-hL-ioA"/>
+                        <segue destination="sUh-e2-eL5" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="MEV-BT-CsD"/>
                     </connections>
                 </notificationController>
             </objects>
             <point key="canvasLocation" x="319" y="-35"/>
+        </scene>
+        <!--Dynamic Notification Interface Controller-->
+        <scene sceneID="KK0-Et-pwB">
+            <objects>
+                <controller id="leK-5Q-jWt"/>
+            </objects>
+            <point key="canvasLocation" x="619" y="-35"/>
+        </scene>
+        <!--Dynamic Interactive Notification Interface Controller-->
+        <scene sceneID="98h-pu-xd2">
+            <objects>
+                <controller id="sUh-e2-eL5"/>
+            </objects>
+            <point key="canvasLocation" x="619" y="-335"/>
         </scene>
     </scenes>
 </document>
