@@ -13,8 +13,7 @@ import UserNotifications
 
 class NotificationController: WKUserNotificationInterfaceController {
 
-   // @IBOutlet weak var alertLable: WKInterfaceLabel!
-  
+    //MARK: OUTLETS
     @IBOutlet weak var outputText: WKInterfaceLabel!
     
     override init() {
@@ -39,54 +38,48 @@ class NotificationController: WKUserNotificationInterfaceController {
         // This method is called when a notification needs to be presented.
         // Implement it if you use a dynamic notification interface.
         // Populate your dynamic notification interface as quickly as possible.
-        print("Noti caale")
+        print("Notification called:::")
         
-      //  outputText.setText("hgfcg")
+      //called method
         generateDate()
       
     }
     
     func generateDate(){
-        print("FUnction is called")
+        print("Function is called")
         
         let hour1 = 8
-    
         print("Hour: \(hour1)")
         let minutes1 = 40
-    
         
         let hour2 = 6
         print("Hour: \(hour2)")
         let minutes2 = 10
         
         // differences of date and time
-        
-       let realHour = hour1 - hour2
+        let realHour = hour1 - hour2
         let realMin = minutes1 - minutes2
-        
         
         if(realHour == 2)
         {
             outputText.setText("CHECK IN")
-           
         }
-        else if(realHour == 1){
-            
+        else if(realHour == 1)
+        {
             outputText.setText("GO TO GATE")
         }
-        else if (realMin == 30){
-         
+        else if (realMin == 30)
+        {
             outputText.setText("NOW BOARDING")
         }
-        else if(realMin == 0){
-          
+        else if(realMin == 0)
+        {
             outputText.setText("IN FLIGHT")
         }
-        else{
+        else
+        {
              outputText.setText("NO UPCOMING TRIPS")
-            
         }
-
 
     }
    
