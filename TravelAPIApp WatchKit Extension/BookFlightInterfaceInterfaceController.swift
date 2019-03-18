@@ -129,7 +129,7 @@ class BookFlightInterfaceInterfaceController: WKInterfaceController, WCSessionDe
     @IBAction func sendToPhoneButton() {
         
         print("BookedList: \(bookedList)")
-        let msg = ["Count" : "\(bookedList)"]
+        let msg = ["Count" : bookedList]
         print("msg: \(msg)")
         if session!.isReachable {
             session!.sendMessage(msg, replyHandler: nil, errorHandler: { (error) -> Void in

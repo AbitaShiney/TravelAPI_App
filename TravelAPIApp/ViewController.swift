@@ -17,7 +17,14 @@ class ViewController: UIViewController, UIPickerViewDelegate , UIPickerViewDataS
     
     @IBOutlet weak var arrivalTextField: UITextField!
     
-    @IBOutlet weak var outputLabel: UILabel!
+    @IBOutlet weak var toCity: UILabel!
+    
+    @IBOutlet weak var time: UILabel!
+    @IBOutlet weak var fromCity: UILabel!
+    
+    @IBOutlet weak var airlines: UILabel!
+    
+    @IBOutlet weak var arrivalDate: UILabel!
     var toData:[String] = []
      var arrivalData:[String] = []
     var pickerView = UIPickerView()
@@ -26,6 +33,7 @@ class ViewController: UIViewController, UIPickerViewDelegate , UIPickerViewDataS
     var cityList = JSON()
     //var resultData = JSON()
     var wcSession : WCSession!
+    var data: [[String : String]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -147,7 +155,24 @@ class ViewController: UIViewController, UIPickerViewDelegate , UIPickerViewDataS
     }
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         DispatchQueue.main.async {
-            self.outputLabel.text = "Message : \(message)"
+            //self.outputLabel.text = "\(message)"
+            self.data = message["Count"] as! [[String : String]]
+            //print("Rows:\(self.data.count)")
+            
+        
+            for flight in self.data {
+           
+                 self.airlines.text = flight["airlines"]
+
+                self.toCity.text = flight["arrivalCity"]
+
+                self.fromCity.text = flight["depatureCity"]
+
+                self.time.text = flight["depatureDate"]
+                self.arrivalDate.text = flight["arrivalDate"]
+
+            }
+           
         }
     }
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
@@ -160,6 +185,10 @@ class ViewController: UIViewController, UIPickerViewDelegate , UIPickerViewDataS
     
     func sessionDidDeactivate(_ session: WCSession) {
             
+    }
+    
+    @IBAction func bookedBtn(_ sender: Any) {
+        
     }
 }
 

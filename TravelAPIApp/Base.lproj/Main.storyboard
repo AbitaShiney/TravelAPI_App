@@ -55,14 +55,38 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0N-Vd-8z4">
-                                <rect key="frame" x="137" y="345" width="102" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <state key="normal" title="Booked Flights"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S11-Uk-YI6">
-                                <rect key="frame" x="52" y="305" width="259" height="32"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FROM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahT-1s-GUi">
+                                <rect key="frame" x="39" y="359" width="47.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Booked Flights" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3f-35-68x">
+                                <rect key="frame" x="128" y="314" width="114" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iu-FL-BMB">
+                                <rect key="frame" x="336" y="359" width="23" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AIRLINES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAJ-pI-C0p">
+                                <rect key="frame" x="16" y="469" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DEPARTURE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHo-32-VH7">
+                                <rect key="frame" x="39" y="408" width="96.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARRIVAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TO0-YK-D5l">
+                                <rect key="frame" x="288" y="407" width="67" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -72,30 +96,49 @@
                         <constraints>
                             <constraint firstItem="1Vl-Bq-v7O" firstAttribute="top" secondItem="6IQ-5v-aA8" secondAttribute="bottom" constant="21" id="0gd-E2-seD"/>
                             <constraint firstItem="6IQ-5v-aA8" firstAttribute="top" secondItem="Uee-0j-aNJ" secondAttribute="top" constant="33" id="0lA-Dg-MEm"/>
+                            <constraint firstItem="Uee-0j-aNJ" firstAttribute="trailing" secondItem="2iu-FL-BMB" secondAttribute="trailing" constant="16" id="1W4-XH-dTH"/>
+                            <constraint firstItem="Uee-0j-aNJ" firstAttribute="trailing" secondItem="H3f-35-68x" secondAttribute="trailing" constant="133" id="40N-el-ylg"/>
+                            <constraint firstItem="TO0-YK-D5l" firstAttribute="top" secondItem="2iu-FL-BMB" secondAttribute="bottom" constant="27" id="5tX-eV-0xE"/>
                             <constraint firstItem="Uee-0j-aNJ" firstAttribute="trailing" secondItem="6IQ-5v-aA8" secondAttribute="trailing" constant="133" id="6vc-bw-QUm"/>
+                            <constraint firstItem="Uee-0j-aNJ" firstAttribute="trailing" secondItem="TO0-YK-D5l" secondAttribute="trailing" constant="20" id="77k-U5-8vC"/>
+                            <constraint firstItem="H3f-35-68x" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" constant="128" id="8wm-ri-dXL"/>
                             <constraint firstItem="EXy-FD-iMp" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" constant="127" id="BWd-cD-3JJ"/>
                             <constraint firstItem="C75-Tj-DEf" firstAttribute="top" secondItem="Aat-YG-Uft" secondAttribute="bottom" constant="23" id="BsW-b6-qd7"/>
                             <constraint firstItem="C75-Tj-DEf" firstAttribute="top" secondItem="Aat-YG-Uft" secondAttribute="bottom" constant="23" id="EgO-xA-bT3"/>
                             <constraint firstItem="Aat-YG-Uft" firstAttribute="top" secondItem="1Vl-Bq-v7O" secondAttribute="bottom" constant="23" id="FEV-dB-EdY"/>
                             <constraint firstItem="1Vl-Bq-v7O" firstAttribute="top" secondItem="6IQ-5v-aA8" secondAttribute="bottom" constant="21" id="FjY-Nu-MdG"/>
                             <constraint firstItem="EXy-FD-iMp" firstAttribute="top" secondItem="C75-Tj-DEf" secondAttribute="bottom" constant="45" id="GxR-Mv-l5V"/>
+                            <constraint firstItem="GHo-32-VH7" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" constant="39" id="JcD-zh-FZx"/>
+                            <constraint firstItem="ahT-1s-GUi" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" constant="39" id="L1I-Ka-APR"/>
                             <constraint firstItem="Uee-0j-aNJ" firstAttribute="trailing" secondItem="1Vl-Bq-v7O" secondAttribute="trailing" constant="20" id="Osk-dI-JRF"/>
+                            <constraint firstItem="GHo-32-VH7" firstAttribute="top" secondItem="ahT-1s-GUi" secondAttribute="bottom" constant="28" id="SFv-Aj-9o1"/>
                             <constraint firstItem="Uee-0j-aNJ" firstAttribute="bottom" secondItem="EXy-FD-iMp" secondAttribute="bottom" constant="370" id="T0s-U5-4It"/>
+                            <constraint firstItem="2iu-FL-BMB" firstAttribute="top" secondItem="EXy-FD-iMp" secondAttribute="bottom" constant="62" id="Tgw-AW-xNs"/>
+                            <constraint firstItem="Uee-0j-aNJ" firstAttribute="trailing" secondItem="qAJ-pI-C0p" secondAttribute="trailing" constant="16" id="UwZ-yf-n59"/>
+                            <constraint firstItem="qAJ-pI-C0p" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" constant="16" id="agl-5P-vWJ"/>
                             <constraint firstItem="Uee-0j-aNJ" firstAttribute="trailing" secondItem="Aat-YG-Uft" secondAttribute="trailing" constant="144" id="bSh-5A-JvS"/>
                             <constraint firstItem="6IQ-5v-aA8" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" constant="132" id="bs5-0z-OMo"/>
                             <constraint firstItem="C75-Tj-DEf" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" constant="20" id="drw-0A-SwJ"/>
                             <constraint firstItem="Aat-YG-Uft" firstAttribute="top" secondItem="1Vl-Bq-v7O" secondAttribute="bottom" constant="23" id="hNE-Oo-zqI"/>
                             <constraint firstItem="Aat-YG-Uft" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" constant="143" id="hrt-aK-cdE"/>
+                            <constraint firstItem="Uee-0j-aNJ" firstAttribute="bottom" secondItem="qAJ-pI-C0p" secondAttribute="bottom" constant="177" id="hy1-ms-9bV"/>
                             <constraint firstItem="1Vl-Bq-v7O" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" constant="20" id="mYY-La-683"/>
+                            <constraint firstItem="qAJ-pI-C0p" firstAttribute="top" secondItem="GHo-32-VH7" secondAttribute="bottom" constant="40" id="mZL-jV-t2M"/>
                             <constraint firstItem="Uee-0j-aNJ" firstAttribute="trailing" secondItem="C75-Tj-DEf" secondAttribute="trailing" constant="20" id="oB0-HD-sBZ"/>
+                            <constraint firstItem="ahT-1s-GUi" firstAttribute="top" secondItem="H3f-35-68x" secondAttribute="bottom" constant="24" id="orF-NJ-PdY"/>
+                            <constraint firstItem="H3f-35-68x" firstAttribute="top" secondItem="EXy-FD-iMp" secondAttribute="bottom" constant="17" id="sKf-De-DBN"/>
                             <constraint firstItem="EXy-FD-iMp" firstAttribute="top" secondItem="C75-Tj-DEf" secondAttribute="bottom" constant="45" id="vkL-9k-bBs"/>
                             <constraint firstItem="Uee-0j-aNJ" firstAttribute="trailing" secondItem="EXy-FD-iMp" secondAttribute="trailing" constant="126" id="x1m-rd-SOt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Uee-0j-aNJ"/>
                     </view>
                     <connections>
+                        <outlet property="airlines" destination="qAJ-pI-C0p" id="abL-WG-F4S"/>
+                        <outlet property="arrivalDate" destination="TO0-YK-D5l" id="4om-GM-RzR"/>
                         <outlet property="arrivalTextField" destination="C75-Tj-DEf" id="bxk-p3-Fz9"/>
-                        <outlet property="outputLabel" destination="S11-Uk-YI6" id="2EB-ud-Qm0"/>
+                        <outlet property="fromCity" destination="ahT-1s-GUi" id="aMB-KD-IJd"/>
+                        <outlet property="time" destination="GHo-32-VH7" id="eTW-bc-01j"/>
+                        <outlet property="toCity" destination="2iu-FL-BMB" id="pBP-0P-A3h"/>
                         <outlet property="toTextField" destination="1Vl-Bq-v7O" id="npM-i8-1jx"/>
                     </connections>
                 </viewController>
@@ -103,20 +146,72 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Booked View Controller-->
         <scene sceneID="2Hv-jA-tF5">
             <objects>
-                <viewController id="R38-05-8wA" sceneMemberID="viewController">
+                <viewController id="R38-05-8wA" customClass="BookedViewController" customModule="TravelAPIApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4gG-0Z-4hI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kR0-GR-pVl">
+                                <rect key="frame" x="0.0" y="20" width="380" height="647"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myCell" id="Syf-j7-v5Y" customClass="TableViewCell" customModule="TravelAPIApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="380" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Syf-j7-v5Y" id="2ya-fL-uSr">
+                                            <rect key="frame" x="0.0" y="0.0" width="380" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoV-Lj-5N0">
+                                                    <rect key="frame" x="35" y="12" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AE9-LP-Ghh">
+                                                    <rect key="frame" x="152" y="12" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Goh-Az-c7S">
+                                                    <rect key="frame" x="269" y="12" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="date" destination="Goh-Az-c7S" id="BBl-tv-AXH"/>
+                                            <outlet property="fromCity" destination="AE9-LP-Ghh" id="NYc-6i-6xo"/>
+                                            <outlet property="toCity" destination="xoV-Lj-5N0" id="Sc9-1R-0Ki"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="R38-05-8wA" id="0bC-MR-Ozf"/>
+                                    <outlet property="delegate" destination="R38-05-8wA" id="aAn-Lm-jcd"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="l6Y-L3-Q8L"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="kR0-GR-pVl" id="cb5-Ca-A90"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c03-NY-MaR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="849" y="127"/>
+            <point key="canvasLocation" x="848.79999999999995" y="126.38680659670166"/>
         </scene>
     </scenes>
 </document>

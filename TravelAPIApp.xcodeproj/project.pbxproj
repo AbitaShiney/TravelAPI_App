@@ -27,6 +27,8 @@
 		F38DC86273480C38DB0BFAD7 /* Pods_TravelAPIApp_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F91916A313C138ECD3B3634 /* Pods_TravelAPIApp_WatchKit_Extension.framework */; };
 		FCD9BA72223D816300361EFF /* InterfaceCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD9BA71223D816300361EFF /* InterfaceCellController.swift */; };
 		FCD9BA74223D92E400361EFF /* BookFlightInterfaceInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD9BA73223D92E400361EFF /* BookFlightInterfaceInterfaceController.swift */; };
+		FCD9BA78223F551900361EFF /* BookedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD9BA77223F551900361EFF /* BookedViewController.swift */; };
+		FCD9BA7A223F567500361EFF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD9BA79223F567500361EFF /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +105,8 @@
 		ECCD6EE2223DA51D002BBD3A /* BookFlightCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookFlightCellController.swift; sourceTree = "<group>"; };
 		FCD9BA71223D816300361EFF /* InterfaceCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceCellController.swift; sourceTree = "<group>"; };
 		FCD9BA73223D92E400361EFF /* BookFlightInterfaceInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookFlightInterfaceInterfaceController.swift; sourceTree = "<group>"; };
+		FCD9BA77223F551900361EFF /* BookedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookedViewController.swift; sourceTree = "<group>"; };
+		FCD9BA79223F567500361EFF /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +191,8 @@
 				C1EE9A04223BF77600A9ED26 /* Assets.xcassets */,
 				C1EE9A06223BF77700A9ED26 /* LaunchScreen.storyboard */,
 				C1EE9A09223BF77700A9ED26 /* Info.plist */,
+				FCD9BA77223F551900361EFF /* BookedViewController.swift */,
+				FCD9BA79223F567500361EFF /* TableViewCell.swift */,
 			);
 			path = TravelAPIApp;
 			sourceTree = "<group>";
@@ -454,7 +460,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1EE9A00223BF77500A9ED26 /* ViewController.swift in Sources */,
+				FCD9BA7A223F567500361EFF /* TableViewCell.swift in Sources */,
 				C1EE99FE223BF77500A9ED26 /* AppDelegate.swift in Sources */,
+				FCD9BA78223F551900361EFF /* BookedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
