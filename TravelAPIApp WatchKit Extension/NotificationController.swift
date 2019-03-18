@@ -13,6 +13,8 @@ import UserNotifications
 
 class NotificationController: WKUserNotificationInterfaceController {
 
+   // @IBOutlet weak var alertLable: WKInterfaceLabel!
+  
     @IBOutlet weak var outputText: WKInterfaceLabel!
     
     override init() {
@@ -37,45 +39,55 @@ class NotificationController: WKUserNotificationInterfaceController {
         // This method is called when a notification needs to be presented.
         // Implement it if you use a dynamic notification interface.
         // Populate your dynamic notification interface as quickly as possible.
+        print("Noti caale")
         
+      //  outputText.setText("hgfcg")
+        generateDate()
       
     }
-//    override func didReceive(_ localNotification: UILocalNotification, withCompletion completionHandler: @escaping (WKUserNotificationInterfaceType) -> Void) {
-//
-//        if let aps = localNotification["aps"] as? NSDictionary
-//        {
-//
-//        }
-//
-//    }
     
-    override func didReceiveRemoteNotification(_ remoteNotification: [AnyHashable : Any], withCompletion completionHandler: @escaping (WKUserNotificationInterfaceType) -> Void) {
+    func generateDate(){
+        print("FUnction is called")
         
-        let date1 = Date()
-        
-        let calendar1 = Calendar.current
-        
-        let day1 = calendar1.component(.day, from: date1)
-        
-        let year1 = calendar1.component(.year, from: date1)
-        
-        let month1 = calendar1.component(.month, from: date1)
-        
-        let hour1 = calendar1.component(.hour, from: date1)
+        let hour1 = 8
+    
         print("Hour: \(hour1)")
-        let minutes1 = calendar1.component(.minute, from: date1)
-        if let aps = remoteNotification["aps"] as? NSDictionary {
-            if let title = aps["title"] as? String {
-                outputText.setText(title)
-            }
-        }
-        if let hour = remoteNotification["hour"] as? NSDictionary {
-            if let title = hour["title"] as? String {
-                outputText.setText(title)
-            }
-        }
-        completionHandler(WKUserNotificationInterfaceType.custom)
-    }
+        let minutes1 = 40
     
+        
+        let hour2 = 6
+        print("Hour: \(hour2)")
+        let minutes2 = 10
+        
+        // differences of date and time
+        
+       let realHour = hour1 - hour2
+        let realMin = minutes1 - minutes2
+        
+        
+        if(realHour == 2)
+        {
+            outputText.setText("CHECK IN")
+           
+        }
+        else if(realHour == 1){
+            
+            outputText.setText("GO TO GATE")
+        }
+        else if (realMin == 30){
+         
+            outputText.setText("NOW BOARDING")
+        }
+        else if(realMin == 0){
+          
+            outputText.setText("IN FLIGHT")
+        }
+        else{
+             outputText.setText("NO UPCOMING TRIPS")
+            
+        }
+
+
+    }
    
 }

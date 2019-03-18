@@ -99,36 +99,42 @@
             <point key="canvasLocation" x="572" y="279"/>
         </scene>
         <!--Static Notification Interface Controller-->
-        <scene sceneID="rfz-Qh-vzi">
+        <scene sceneID="cFl-Lk-8UC">
             <objects>
-                <notificationController id="iey-6J-3Oq" customClass="NotificationController" customModule="TravelAPIApp_WatchKit_Extension">
+                <notificationController id="IcJ-JM-vdO" customClass="NotificationController" customModule="TravelAPIApp_WatchKit_Extension">
                     <items>
-                        <label width="1" alignment="left" text="Alert Label" numberOfLines="3" id="Nvi-vu-eAK"/>
+                        <label alignment="left" text="Alert Label" id="vxD-il-Brh"/>
                     </items>
-                    <notificationCategory key="notificationCategory" id="Sv1-s6-LdS"/>
-                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <notificationCategory key="notificationCategory" identifier="myCategoryy" id="68u-Cb-3vO"/>
                     <connections>
-                        <outlet property="notificationAlertLabel" destination="Nvi-vu-eAK" id="N98-Wd-6Pp"/>
-                        <segue destination="leK-5Q-jWt" kind="relationship" relationship="dynamicNotificationInterface" id="E2f-hL-ioA"/>
-                        <segue destination="sUh-e2-eL5" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="MEV-BT-CsD"/>
+                        <outlet property="notificationAlertLabel" destination="vxD-il-Brh" id="yf1-Mg-mHX"/>
+                        <segue destination="HBz-e5-hYT" kind="relationship" relationship="dynamicNotificationInterface" id="GRf-BL-SRO"/>
+                        <segue destination="xS8-1K-Ogx" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="pyF-4t-BGO"/>
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="319" y="-35"/>
+            <point key="canvasLocation" x="176" y="-364"/>
         </scene>
-        <!--Dynamic Notification Interface Controller-->
-        <scene sceneID="KK0-Et-pwB">
+        <!--Notification Controller-->
+        <scene sceneID="Agc-7G-wdO">
             <objects>
-                <controller id="leK-5Q-jWt"/>
+                <controller id="HBz-e5-hYT" customClass="NotificationController" customModule="TravelAPIApp_WatchKit_Extension"/>
             </objects>
-            <point key="canvasLocation" x="619" y="-35"/>
+            <point key="canvasLocation" x="476" y="-364"/>
         </scene>
-        <!--Dynamic Interactive Notification Interface Controller-->
-        <scene sceneID="98h-pu-xd2">
+        <!--Notification Controller-->
+        <scene sceneID="VyH-Vz-h6p">
             <objects>
-                <controller id="sUh-e2-eL5"/>
+                <controller id="xS8-1K-Ogx" customClass="NotificationController" customModule="TravelAPIApp_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Label" id="Cyv-Y5-ACM"/>
+                    </items>
+                    <connections>
+                        <outlet property="outputText" destination="Cyv-Y5-ACM" id="D3w-fK-ZF9"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="619" y="-335"/>
+            <point key="canvasLocation" x="476" y="-664"/>
         </scene>
     </scenes>
 </document>

@@ -119,6 +119,7 @@ class BookFlightInterfaceInterfaceController: WKInterfaceController, WCSessionDe
             row.deptCity.setText(game["depatureCity"])
             row.deptDate.setText(game["depatureDate"])
             print("airlines data...........")
+                //dateSeperatera(date: game["depatureDate"] as! Date)
             index = index + 1
             }
         }
@@ -138,6 +139,8 @@ class BookFlightInterfaceInterfaceController: WKInterfaceController, WCSessionDe
             count += 1
         }
     }
+    
+  
 }
 
 
