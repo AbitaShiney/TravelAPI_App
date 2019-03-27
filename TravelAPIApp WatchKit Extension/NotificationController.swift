@@ -52,7 +52,7 @@ class NotificationController: WKUserNotificationInterfaceController {
         print("Hour: \(hour1)")
         let minutes1 = 40
         
-        let hour2 = 6
+        let hour2 = 7
         print("Hour: \(hour2)")
         let minutes2 = 10
         
